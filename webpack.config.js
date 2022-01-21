@@ -2,14 +2,14 @@ var path = require('path');
 const webpack = require('webpack');
 
 module.exports = [
-  {
+    {
     name: 'bundle',
     entry: './src/js/main.js',
     mode: 'development',
     output: {
       path: path.resolve(__dirname, 'dist/js'),
       filename: 'bundle.js',
-      publicPath: './dist/js'
+      publicPath: 'dist/js'
     }
   },
   {
@@ -17,7 +17,7 @@ module.exports = [
     entry: './src/js/main.js',
     mode: 'production',
     output: {
-      path: path.resolve(__dirname, 'dist/js'),
+      path: path.resolve(__dirname, './dist/js'),
       filename: 'bundle.min.js',
       publicPath: './dist/js'
     }
@@ -27,7 +27,7 @@ module.exports = [
     entry: './src/js/main.js',
     mode: 'production',
     output: {
-      path: path.resolve(__dirname, 'dist/js'),
+      path: path.resolve(__dirname, './dist/js'),
       filename: 'bundle.blab.js',
       publicPath: './dist/js'
     },
@@ -46,16 +46,13 @@ module.exports = [
           ]
         }
       ]
-    }
+    },
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'dist'),
+      },
+      compress: true,
+      port: 9000,
+    },
   },
-  // module.exports = {
-  //   //...
-  //   devServer: {
-  //     static: {
-  //       directory: path.join(__dirname, 'dist'),
-  //     },
-  //     compress: true,
-  //     port: 9000,
-  //   },
-  // }
 ]

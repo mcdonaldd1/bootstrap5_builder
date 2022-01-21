@@ -5,7 +5,7 @@
   "description": "Template site used to create custom sites based on bootstrap5",
   "author": "Dan McDonald",
   "license": "MIT",
-  "main": "webpack.config.js",
+  "main": "./src/js/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcdonaldd1/bootstrap5_builder.git"
@@ -16,8 +16,8 @@
     "Bootstrap"
   ],
   "scripts": {
-    "watch:sass": "sass --watch src/sass:dist/css",
-    "compile:sass": "sass src/sass:dist/css",
+    "watch:sass": "sass --watch ./src/sass:./dist/css",
+    "compile:sass": "sass ./src/sass:./dist/css",
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",

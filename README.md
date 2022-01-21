@@ -82,8 +82,9 @@ sass/_custom.scss
 sass/_icon-list.scss  
 sass/style.scss   
 
+- - - - - - - - - 
 
-# Steps to Implement
+# Steps to Manually Implement
 ## Install base technology
 ## Create Folder and File Structure
 ## Copy over ANY needed files
@@ -168,8 +169,8 @@ devServer
 <ul>
   <li>Brad - Traversy Media</li>
   <li>Kyle - Web Dev Simplified</li>
-  <li>Mosh - df with Mosh</li>
-  <li>Kevin - </li>
+  <li>Mosh - Programming with Mosh</li>
+  <li>Kevin - Kevin Powell</li>
   <li>Tim - Tech with Tim</li>
 </ul>
 </p>
