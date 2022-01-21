@@ -66,20 +66,27 @@
 
 ## Scripts
 ``` shell
-"scripts": {
-    "watch:sass": "sass --watch ./src/sass:./dist/css",
-    "compile:sass": "sass ./src/sass:./dist/css",
+"scripts" : {
+    "watch:sass"      : "sass --watch ./src/sass:./dist/css",
+    "compile:sass"    : "sass ./src/sass:./dist/css",
     
-    "* DNU lint:css": "stylelint ./src/sass/",
+    "* DNU lint:css"  : "stylelint ./src/sass/",
     "* DNU prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
 
-    "bundle:js": "webpack --config-name bundle",
-    "pack:js": "webpack --config-name pack",
-    "blable:js": "webpack --config-name blable",
+    "bundle:js"       : "webpack --config-name bundle",
+    "pack:js"         : "webpack --config-name pack",
+    "blable:js"       : "webpack --config-name blable",
 
-    "build:project": "npm-run-all compile:sass blable:js",
-    "server:basic": "webpack-dev-server",
-    "server:development": "webpack-dev-server --config-name blable"
+    "reset:all"       : "npm-run-all reset:html reset:scss reset:js",
+    "reset:html"      : "echo Reset html",
+    "reset:scss"      : "echo Reset scss",
+    "reset:js"        : "echo Reset js",
+    
+    "proj:build"      : "npm-run-all compile:sass blable:js",
+    "server:basic"    : "webpack-dev-server",
+    "server:dev"      : "webpack-dev-server --config-name blable",
+
+    "test:simple"     : "echo Test"
   }
 ```
 
@@ -149,6 +156,7 @@ sass/style.scss
 > npm i -D stylelint stylelint-config-twbs-bootstrap 
 > npm i -D postcss postcss-cli
 > npm i -D @babel/core @babel/preset-env babel-loader
+> npm i -D copy-webpack-plugin
 ```
 ## package.json 
 

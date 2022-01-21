@@ -1,8 +1,24 @@
 var path = require('path');
 const webpack = require('webpack');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+ 
 module.exports = [
-    {
+  {
+    name: 'reset_html',
+    context: path.join(__dirname, './dist'),
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      publicPath: './dist'
+    },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/reset/html' }
+            ]
+        })
+    ]
+},
+{
     name: 'bundle',
     entry: './src/js/main.js',
     mode: 'development',

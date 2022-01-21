@@ -22,23 +22,18 @@
   "scripts": {
     "watch:sass": "sass --watch ./src/sass:./dist/css",
     "compile:sass": "sass ./src/sass:./dist/css",
-    
     "* DNU lint:css": "stylelint ./src/sass/",
     "* DNU prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
-
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",
-
     "reset:all": "npm-run-all reset:html reset:scss reset:js",
-    "reset:html": "echo Reset html",
+    "reset:html": "webpack --config-name reset_html",
     "reset:scss": "echo Reset scss",
     "reset:js": "echo Reset js",
-    
     "proj:build": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
-    "server:development": "webpack-dev-server --config-name blable",
-
+    "server:dev": "webpack-dev-server --config-name blable",
     "test:simple": "echo Test"
   },
   "dependencies": {
@@ -50,6 +45,7 @@
     "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.1",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
