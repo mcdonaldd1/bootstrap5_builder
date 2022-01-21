@@ -11,42 +11,40 @@
 
 <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Summary</p>  
 
-* The `/builder/` folder is the root and holds project and build related files.   
-* The `/dist/` folder contains all site related files.  
-* The `/dist/` folders contents are what will be deployed to the stage or production servers web site.  
-* The `/dist/css` folder contains compiled css. DO NOT EDIT these files.    
-* The `/dist/js` folder contains compiled javascript. DO NOT EDIT these files.  
-* The `/node_modules/` folder contain all vender source files. You will NOT edit these files. You will reference them.  
-* The `/src/` folder will contain all custom source files. You WILL edit the `scss` and `javascript` in these files.  
-* Includes `theming.html` to help visualize changes as a whole.  
+| Folder | Description |
+| --- | --- |
+|`/builder/` | The root folder that holds project and build related files. <br /> You `will not generally have to edit` these files but you may come up with a reason. |
+|`/dist/` | Contains all site related files. This folder can be deployed to a live site. <br /> `Only edit the index.html` in this folder. All other files are auto generated.  |
+|`/node_modules/` | Contains all installed dependencies of the project <br /> `Do not edit these files` but you will link to or import some of them. |
+|`/src/` | Contain all custom source files. You `WILL edit some, but not all,` of the contents. <br /> Anything you download will be put into one of it's sub directories. <br /> This is the `working` folder. | 
+|`package.json` | File with all the scripts. Uses `webpack.config.js` to do the projects automation work. | 
 
 <br /><hr color="black" width="75%"/><br />
 
 <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>
   
 ## Developer tools
-
-* VS Code with:  
-
-|  |  |  |  
-| --- | --- | --- |  
-| beautify     | auto close tag    | open in default browser  |  
-| emmet        | auto rename tag   | npm intellisense         |  
-| bs5 snippets | color highlighter |                          |  
-
-* Git
-* Git bash
-* Git-Hub
-* SSH
-  
-* Node.js
-* NPM  
-
-## Web Tools  
-### downloads required to use these
-* Google fonts
-* Bootswatch  
-
+ 
+|                   |                   |                           |       | 
+| ---               | ---               | ---                       |  ---  |
+| VS Code / extensions |                |                           |       |
+| beautify          | auto close tag    | open in default browser   |       |  
+| emmet             | auto rename tag   | npm intellisense          |       |  
+| bs5 snippets      | color highlighter |                           |       |  
+|                   |                   |                           |       |
+| Git               | Git bash          | Git hub                   | ssh   |
+| NPM               | node.js           |                           |       |
+|                   |                   |                           |       |
+| Bootstrap         | Bootstrap icons   | [Bootswatch](https://www.bootswatch.com) |       |
+|                   |                   |                           |       |
+| WebPack           |                   |                           |       |
+|                   |                   |                           |       |
+|                   |                   |                           |       |
+|                   |                   |                           |       |
+|                   |                   |                           |       |
+| [Google fonts](https://fonts.google.com) |          |             |       |
+|                   |                   |                           |       |
+| [CDN finder](https://cdnjs.com) |     |                           |       |
   
 ## Dev-Dependencies
 ``` shell
