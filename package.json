@@ -1,0 +1,43 @@
+{
+  "name": "bootstrap5_builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Template site used to create custom sites based on bootstrap5",
+  "author": "Dan McDonald",
+  "license": "MIT",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcdonaldd1/bootstrap5_builder.git"
+  },
+  "homepage": "https://github.com/mcdonaldd1/bootstrap5_builder#readme",
+  "keywords": [
+    "Bootstrap5",
+    "Bootstrap"
+  ],
+  "scripts": {
+    "watch:sass": "sass --watch src/sass:dist/css",
+    "compile:sass": "sass src/sass:dist/css",
+    "bundle:js": "webpack --config-name bundle",
+    "pack:js": "webpack --config-name pack",
+    "blable:js": "webpack --config-name blable",
+    "build:project": "npm-run-all compile:sass blable:js",
+    "server:basic": "webpack-dev-server",
+    "server:development": "webpack-dev-server --config-name blable"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.0",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
