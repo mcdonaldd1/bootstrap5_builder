@@ -70,8 +70,8 @@
     "watch:sass": "sass --watch ./src/sass:./dist/css",
     "compile:sass": "sass ./src/sass:./dist/css",
     
-    "lint:css": "stylelint ./src/sass/",
-    "prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
+    "* DNU lint:css": "stylelint ./src/sass/",
+    "* DNU prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
 
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
@@ -127,19 +127,6 @@ sass/_icon-list.scss
 sass/style.scss   
 
 <br /><hr color="black" width="75%"/><br />
-
-# Steps to Manually Implement
-## Install base technology
-## Create Folder and File Structure
-## Copy over ANY needed files
-## Create Git-hub repository  
-## Git init and .gitignore
-## NPM init and Package.json
-## Install dev-dependencies
-## Install dependencies
-## Configure files to point correctly
-## NPM scripts
-## Test setup
 
 ## Create folder structure
 ```shell

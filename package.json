@@ -23,16 +23,23 @@
     "watch:sass": "sass --watch ./src/sass:./dist/css",
     "compile:sass": "sass ./src/sass:./dist/css",
     
-    "lint:css": "stylelint ./src/sass/",
-    "prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
+    "* DNU lint:css": "stylelint ./src/sass/",
+    "* DNU prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
 
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",
 
-    "build:project": "npm-run-all compile:sass blable:js",
+    "reset:all": "npm-run-all reset:html reset:scss reset:js",
+    "reset:html": "echo Reset html",
+    "reset:scss": "echo Reset scss",
+    "reset:js": "echo Reset js",
+    
+    "proj:build": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
-    "server:development": "webpack-dev-server --config-name blable"
+    "server:development": "webpack-dev-server --config-name blable",
+
+    "test:simple": "echo Test"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
