@@ -13,14 +13,23 @@
   "homepage": "https://github.com/mcdonaldd1/bootstrap5_builder#readme",
   "keywords": [
     "Bootstrap5",
-    "Bootstrap"
+    "Bootstrap icons",
+    "npm",
+    "webpack",
+    "project",
+    "workflow"
   ],
   "scripts": {
     "watch:sass": "sass --watch ./src/sass:./dist/css",
     "compile:sass": "sass ./src/sass:./dist/css",
+    
+    "lint:css": "stylelint ./src/sass/",
+    "prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
+
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",
+
     "build:project": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
     "server:development": "webpack-dev-server --config-name blable"
@@ -32,10 +41,15 @@
   "devDependencies": {
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.49.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-twbs-bootstrap": "^3.0.1",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"

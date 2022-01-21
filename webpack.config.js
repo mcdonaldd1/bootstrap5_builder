@@ -40,7 +40,7 @@ module.exports = [
             {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/env']
+              presets: ['@babel/env']
               }
             }
           ]
@@ -49,7 +49,7 @@ module.exports = [
     },
     devServer: {
       static: {
-        directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'dist'),
       },
       compress: true,
       port: 9000,
