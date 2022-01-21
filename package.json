@@ -22,6 +22,7 @@
   "scripts": {
     "watch:sass": "sass --watch ./src/sass:./dist/css",
     "compile:sass": "sass ./src/sass:./dist/css",
+    "swatch:sass": "sass ./src/swatches:./dist/css",
     "* DNU lint:css": "stylelint ./src/sass/",
     "* DNU prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
     "bundle:js": "webpack --config-name bundle",

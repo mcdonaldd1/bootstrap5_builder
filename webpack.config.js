@@ -1,23 +1,11 @@
 var path = require('path');
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
  
 module.exports = [
   {
     name: 'reset_html',
-    context: path.join(__dirname, './dist'),
-    output: {
-      path: path.resolve(__dirname, './dist'),
-      publicPath: './dist'
+    entry: '.src/reset/resethtml.js'
     },
-    plugins: [
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: './src/reset/html' }
-            ]
-        })
-    ]
-},
 {
     name: 'bundle',
     entry: './src/js/main.js',
@@ -48,6 +36,9 @@ module.exports = [
       publicPath: './dist/js'
     },
     module: {
+      loaders: [
+        { test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, loader: "file" }
+    ],
       rules: [
         {
           test: /\.js$/,
