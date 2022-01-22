@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = [{
     name: 'reset_html',
-    entry: '.src/reset/resethtml.js'
+    entry: './src/reset/reset-html.js'
   },
   {
     name: 'bundle',

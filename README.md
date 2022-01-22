@@ -9,16 +9,22 @@
 
 <br /><hr color="black" width="75%"/><br />
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Clone and Install the repository</p>  
-  
+# Using the Bootstrap5 Builder  
+
+## 1) Open a terminal window   
+```shell
+> 
+```  
+## 2) Clone the repository  
 ```shell
 > git clone https://github.com/mcdonaldd1/bootstrap5_builder.git
+```
+## 3) Install the dependencies 
+```shell
 > cd bootstrap5_builder
 > npm i
 ```
-
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Run Initial Scripts</p>  
-  
+## 4) Run setup scripts  
 ```shell
 # Compile Sass
 npm run compile:sass
@@ -29,16 +35,21 @@ npm run pack:js
 # Start Server
 npm run server:basic
 ```
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Open site in browser - open devtools</p>  
   
+## 4) Open html pages in browser
+### + open devtools  
+   
 [Cheatsheet](http://localhost:9000/cheatsheet.html)  
 [npm-starter](http://localhost:9000/npm-starter.html)  
 [my-starter](http://localhost:9000/starter.html)  
 [theming-kit](http://localhost:9000/theming.html)  
 * Hit F12 or Ctrl-Shift-I (in Chrome or FireFox) to open up dev-tools
 
+## 5) Begin to edit Scss, Javascript and HTML files  
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Summary</p>  
+<br /><hr color="black" width="75%"/><br />
+
+# Summary section 
 
 ## Root Folders  
 
@@ -84,72 +95,69 @@ npm run server:basic
 | starter.html    | XXX |
 | theming.html    | XXX |
 | `dist/css`        |
-| bs-logo-wht.svg | XXX |
+| cheatsheet.css  | XXX |
 | `dist/img`        |
-| cheatsheet.html | XXX |
+| bs-logo-wht.svg | XXX |
 | `dist/js`         |
-| cheatsheet.js | XXX |
+| cheatsheet.js   | XXX |
   
-
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Scripts</p>  
+## NPM Scripts   
   
 | Tested | Scripts | Command | Description |
 | --- | --- | --- | --- |
-| Y | Sass / Scss |  |  |
-| Y | `watch:sass`:  | sass --watch src/scss:dist/css |transpile contents of src/sass folder into dist/css, every time you save sass. Ctrl-C to end. |
-| Y | `compile:sass`:| sass src/scss:dist/css" |transpile contents of src/sass folder into dist/css, once. Run when you need it. |
-| Y | `swatch:sass`:| sass src/swatches:dist/css" |transpile contents of src/swatches folder into dist/css, once. Run when you need it. |
-| X | css |  |  |
-|XXX| `lint:css`:  | stylelint ./src/sass/ | Lints sass/scss/css with BS5 default linting sheet. Lint before transpiling.|
-| X | `prefix:css`:| postcss --replace ./style.css --use autoprefixer | prefixes any style:rule it finds that needs it. Prefix after transpiling |
-| X | Reset |  |  |
-| X | `reset:all`  |  |  |
-| X | `reset:html` |  |  |
-| X | `reset:scss` |  |  |
-| X | `reset:js`   |  |  |
-| Y | Javascript |  |  |
-| Y | `bundle:js`:   | webpack --config-name bundle |compile content of src/js folder into dist/js folder, creating bundle.js |
-| Y | `pack:js`:     | webpack --config-name pack |compile content of src/js folder into dist/js folder, and minify it, creating bundle.min.js |
-| Y | `blable:js`:   | webpack --config-name blable |compiles, minifize and downgrades ES6+ code to ES5, creating bundle.blable.js|
-| X | Server | --- | --- |
+| Y | Sass / Scss  |  |  |
+| Y | `watch:sass`:   | sass --watch src/scss:dist/css |transpile contents of src/sass folder into dist/css, every time you save sass. Ctrl-C to end. |
+| Y | `compile:sass`: | sass src/scss:dist/css" |transpile contents of src/sass folder into dist/css, once. Run when you need it. |
+| Y | `swatch:sass`:  | sass src/swatches:dist/css" |transpile contents of src/swatches folder into dist/css, once. Run when you need it. |
+| . | css          |  |  |
+| X | `lint:css`:  | stylelint ./src/sass/ | Lints sass/scss/css with BS5 default linting sheet. Lint before transpiling.|
+| N | `prefix:css`:| postcss --replace ./style.css --use autoprefixer | prefixes any style:rule it finds that needs it. Prefix after transpiling |
+| . | Reset        |  |  |
+| N | `reset:all`  |  |  |
+| N | `reset:html` |  |  |
+| N | `reset:scss` |  |  |
+| N | `reset:js`   |  |  |
+| Y | Javascript   |  |  |
+| Y | `bundle:js`:    | webpack --config-name bundle |compile content of src/js folder into dist/js folder, creating bundle.js |
+| Y | `pack:js`:      | webpack --config-name pack |compile content of src/js folder into dist/js folder, and minify it, creating bundle.min.js |
+| Y | `blable:js`:    | webpack --config-name blable |compiles, minifize and downgrades ES6+ code to ES5, creating bundle.blable.js|
+| . | Server       |  |  |
+| Y | `server:basic`: | webpack-dev-server | runs a local webserver at http://localhost:9000, uses dist/ as root |
+| N | `server:dev`:   | webpack-dev-server --config-name bundle | runs local server and updates project at each save.|
+| Y | Project      |  |  |
 | Y | `project:build` | npm-run-all compile:sass blable:js | runs both compile sass and blabble javascript |
-| Y | `server:basic`:  | webpack-dev-server | runs a local webserver at http://localhost:9000, uses dist/ as root |
-| X | `server:dev`:  | webpack-dev-server --config-name bundle | runs local server and updates project at each save.|
-| Y | Test | --- | --- |
-| Y | `test:simple` | "echo Test" | no tests yet |  
+| Y | Test         |  |  |
+| Y | `test:simple`   | "echo Test" | no tests yet |  
   
 <br /><hr color="black" width="75%"/><br />
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>
+# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>  
   
-## Developer tools
- 
-|                                           |                   |                           |       | 
-| ---                                       | ---               | ---                       |  ---  |
-| VS Code / extensions                      |                |                           |       |
-| beautify                                  | auto close tag    | open in default browser   |       |  
-| emmet                                     | auto rename tag   | npm intellisense          |       |  
-| bs5 snippets                              | color highlighter |                           |       |  
-|                                           |                   |                           |       |
-| [Git](https://git-scm.com/)               | git-Bash          | [git-Hub](https://github.com/)                   | SSH   |
-| NPM                                       | npm-run-all       | node.js                   | nodemon *not yet |
-|                                           |                   |                           |       |
-| [Bootstrap](https://www.getbootstrap.com/)|                   |  |       |
-| [Bootstrap icons](https://icons.getbootstrap.com/)            |                   |                           |       |
-| [Bootswatch](https://www.bootswatch.com)  |                   |                           |       |
-|                                           |                   |                           |       |
-| WebPack                                   | webpack-cli       | webpack-dev-server        |       |
-| Babel                                     |                   |                           |       |
-| Sass                                      | autoprefixer      | postcss                   | stylelint      |
-|                                           |                   |                           |       |
-| [Google fonts](https://fonts.google.com)  |          |             |       |
-| [CDN finder](https://cdnjs.com)           |     |                           |       |
-| [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css) |  |  |  |
-
+|                                           |                   |                                |                                        | 
+| ---                                       | ---               | ---                            |  ---                                   |
+| [VS Code](https://code.visualstudio.com/) |                   |                                |                                        |
+|                                           | beautify          | auto close tag                 | open in default browser                | 
+|                                           | emmet             | auto rename tag                | npm intellisense                       | 
+|                                           | bs5 snippets      | color highlighter              |                                        | 
+|                                           |                   |                                |                                        |
+| [Git](https://git-scm.com/)               | git-Bash          | [git-Hub](https://github.com/) | [SSH](https://www.ssh.com/academy/ssh) |
+| [NPM](https://www.npmjs.com/)             | npm-run-all       | node.js                        | nodemon *not yet                       |
+|                                           |                   |                                |                                        |
+| [Bootstrap](https://www.getbootstrap.com/)|                   |                                |                                        |
+| [Bootstrap icons](https://icons.getbootstrap.com/)      |     |                                |                                        |
+| [Bootswatch](https://www.bootswatch.com)  |                   |                                |                                        |
+| [BS5-Examples](https://getbootstrap.com/docs/5.1/examples/)   |    |                      |                                        |
+|                                           |                   |                                |                                        |
+| WebPack                                   | webpack-cli       | webpack-dev-server             |                                        |
+| Babel                                     |                   |                                |                                        |
+| Sass                                      | autoprefixer      | postcss                        | stylelint                              |
+    
+* [CDN finder](https://cdnjs.com)
+* [Google fonts](https://fonts.google.com)
+* [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)  
 * [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)  
      
 <br /><hr color="black" width="75%"/><br />
-
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Recreate this project</p>
 
 ## Create folder structure
@@ -212,13 +220,12 @@ devServer: {
 > git push -u origin main
 ```
 <br /><hr color="black" width="75%"/><br />
-
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Credits</p>
 
 <p> This github follows several similar projects, pulling my favorite parts from each. I believe most are based on the original (npm-starter) git-hub project created by @mdo, creator of bootstrap itself. All credit can go to him and the many brilliant people who taught me how to do, what I present to you here.
 </p>
 
-<p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people that can do these things for themselves (maybe better), but there are others who also have a great way of explaining the trade. 
+<p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people who can do these things for themselves (maybe better). Then there are those who can explain these complex subjects in a simple to understand way. 
 <br /> Here are a few of them:
 </p>  
 <ul>
