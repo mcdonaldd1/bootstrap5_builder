@@ -11,8 +11,6 @@
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Usage</p>
 
-Be sure to have [Node.js](https://nodejs.org/) installed before proceeding.
-
 ```shell
 # Clone the repo
 git clone https://github.com/mcdonaldd1/bootstrap5_builder.git
@@ -36,13 +34,56 @@ npm start
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Summary</p>  
 
-| Folder | Description |
+## Root Folders  
+
+| Root | Folder | subfolders  | Description |
+| --- | --- | --- | --- |  
+| `builder/`          |   |   | The root folder that holds project and build related files. |
+|  | `dist/`              |   | Contains all site related files. This folder can be deployed to a live site. |
+|  |  | `css/`                | # |  
+|  |  | `img/`                | # |  
+|  |  | `js/`                 | # |  
+|  | `node_modules/`       |  | Contains all installed dependencies of the project <br /> `Do not edit these files` but you will link to or import some of them. |
+|  |  | `bootstrap/`          | # |
+|  |  | `bootstrap-icons/`    | # |
+|  | `src/`                |  | Contain all custom source files. You `WILL edit some, but not all,` of the contents. <br /> Anything you download will be put into one of it's sub directories. <br /> This is the `working` folder. |
+|  |  | `assets/`             | # |
+|  |  | `fonts/`              | # |
+|  |  | `js/`                 | # |
+|  |  | `reset/`              | # |
+|  |  | `sass/`               | # |
+|  |  | `swatches/`           | # |
+| # | # | # | # |  
+  
+  
+## `builder/` files
+| File | Description |
 | --- | --- |
-|`/builder/` | The root folder that holds project and build related files. <br /> You `will not generally have to edit` these files but you may come up with a reason. |
-|`/dist/` | Contains all site related files. This folder can be deployed to a live site. <br /> `Only edit the index.html` in this folder. All other files are auto generated.  |
-|`/node_modules/` | Contains all installed dependencies of the project <br /> `Do not edit these files` but you will link to or import some of them. |
-|`/src/` | Contain all custom source files. You `WILL edit some, but not all,` of the contents. <br /> Anything you download will be put into one of it's sub directories. <br /> This is the `working` folder. | 
-|`package.json` | File with all the scripts. Uses `webpack.config.js` to do the projects automation work. | 
+| .browserslistrc | list of browsers, that will be supported via prefixes |
+| .editorconfig | config file for text editors and ide's to provide formatting syntax  |
+| .gitignore | list of folders and files to be ignored (not watched) by `git` |
+| .stylelintignore | list of folders and files to be ignored (not watched) by `stylelint` |
+| .stylelintrc | description |
+| LICENSE.md | standard license file |
+| package-lock.json | system file you should ignore |
+| package.json | main configuration file for npm, and your project |
+| README.md | this file, the one you are reading |
+| webpack.config.js | configuration file for `webpack` |
+   
+## `dist/` files
+| File | Description |
+| --- | --- |
+| cheatsheet.html | XXX |
+| npm-starter.html| XXX |
+| starter.html    | XXX |
+| theming.html    | XXX |
+| `dist/css`        |
+| bs-logo-wht.svg | XXX |
+| `dist/img`        |
+| cheatsheet.html | XXX |
+| `dist/js`         |
+| cheatsheet.js | XXX |
+  
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Scripts</p>  
   
@@ -105,20 +146,7 @@ npm start
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Folder and File List</p>
   
-## `builder/`
-* .gitignore
-* .stylelintignore
-* .stylelintrc
-* LICENSE.md
-* package-lock.json
-* package.json
-* README.md
-* webpack.config.js
-  
-`builder/dist/`  
-`builder/node_modules/`  
-`builder/src/`  
- 
+
 ## `dist/`  
 template files with correct script and link tags: 
 * index.html
