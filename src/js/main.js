@@ -9,4 +9,3 @@ console.log(vfunc()); // this line tests that the imported function works
 // ..for example
 // import "../../node_modules/bootstrap/js/dist/util.js";
 // import "../../node_modules/bootstrap/js/dist/modal.js";
-console.log('test add');

@@ -1,4 +1,4 @@
-<!-- 
+<!--
   Do NOT read this file directly.
   It is created in mark down and should be viewed in a previewer.
   right-click on the file and choose 'view in preview'
@@ -9,22 +9,18 @@
 
 <br /><hr color="black" width="75%"/><br />
 
-# Using the Bootstrap5 Builder  
+# Setup Bootstrap5 Builder
 
-## 1) Open a terminal window   
-```shell
-> 
-```  
-## 2) Clone the repository  
+## 1) Clone the repository
 ```shell
 > git clone https://github.com/mcdonaldd1/bootstrap5_builder.git
 ```
-## 3) Install the dependencies 
+## 2) Install the dependencies
 ```shell
 > cd bootstrap5_builder
 > npm i
 ```
-## 4) Run setup scripts  
+## 3) Run setup scripts
 ```shell
 # Compile Sass
 npm run compile:sass
@@ -35,31 +31,53 @@ npm run pack:js
 # Start Server
 npm run server:basic
 ```
-  
+
 ## 4) Open html pages in browser
-### + open devtools  
-   
-[Cheatsheet](http://localhost:9000/cheatsheet.html)  
-[npm-starter](http://localhost:9000/npm-starter.html)  
-[my-starter](http://localhost:9000/starter.html)  
-[theming-kit](http://localhost:9000/theming.html)  
+#### * theses links only work if the setup scripts were run, and the server has started.
+
+[cheatsheet: http://localhost:9000/cheatsheet.html](http://localhost:9000/cheatsheet.html)
+
+[npm-starter: http://localhost:9000/npm-starter.html](http://localhost:9000/npm-starter.html)
+
+[my-starter: http://localhost:9000/starter.html](http://localhost:9000/starter.html)
+
+[theming-kit: http://localhost:9000/theming.html](http://localhost:9000/theming.html)
+
 * Hit F12 or Ctrl-Shift-I (in Chrome or FireFox) to open up dev-tools
 
-## 5) Begin to edit Scss, Javascript and HTML files  
+
 
 <br /><hr color="black" width="75%"/><br />
 
-# Summary section 
+# Basic Usage
 
-## Root Folders  
+## 1) Edit `sass/scss` and compile to `css`.
+## 2) Edit `Javascript` and bundle and/or minimize it.
+## 3) Babel Javascript and bundle and/or minimize it.
+## 4) Edit HTML
+## 5) Create Custom Themes using `theming` to site
+## 6) add fonts
+## 7) add icons
+## 8) Download and Complile `Bootswatches`
+## 9) Download and Explore `Examples`
+## 10) `Reset` the project or `Export` the project ready for deployment.
+
+
+
+
+<br /><hr color="black" width="75%"/><br />
+
+# Summary section
+
+## Root Folders
 
 | Root | Folder | subfolders  | Description |
-| --- | --- | --- | --- |  
+| --- | --- | --- | --- |
 | `builder/`          |   |   | The root folder that holds project and build related files. |
 |  | `dist/`              |   | Contains all site related files. This folder can be deployed to a live site. |
-|  |  | `css/`                | # |  
-|  |  | `img/`                | # |  
-|  |  | `js/`                 | # |  
+|  |  | `css/`                | # |
+|  |  | `img/`                | # |
+|  |  | `js/`                 | # |
 |  | `node_modules/`       |  | Contains all installed dependencies of the project <br /> `Do not edit these files` but you will link to or import some of them. |
 |  |  | `bootstrap/`          | # |
 |  |  | `bootstrap-icons/`    | # |
@@ -70,23 +88,23 @@ npm run server:basic
 |  |  | `reset/`              | # |
 |  |  | `sass/`               | # |
 |  |  | `swatches/`           | # |
-| # | # | # | # |  
-  
-  
+| # | # | # | # |
+
+
 ## `builder/` files
 | File | Description |
 | --- | --- |
-| .browserslistrc | list of browsers, that will be supported via prefixes |
-| .editorconfig | config file for text editors and ide's to provide formatting syntax  |
-| .gitignore | list of folders and files to be ignored (not watched) by `git` |
+| .browserslistrc | `Postcss` uses this to target browsers it will or won't support. <br /> `autoprefixer` will only prefix the code neede to support the listed browsers. `F... IE` |
+| .editorconfig | Used to overide existing settings on 'editorconfig' aware editors and ide's. <br /> In VSCode install the extension `EditorConfig for VSCode`  |
+| .gitignore | list of folders and files to be ignored (not watched) by `git`. |
 | .stylelintignore | list of folders and files to be ignored (not watched) by `stylelint` |
-| .stylelintrc | description |
+| .stylelintrc | `stylelint` uses this file to load specific linters. This project uses the official Bootstrap5 linter. |
 | LICENSE.md | standard license file |
 | package-lock.json | system file you should ignore |
 | package.json | main configuration file for npm, and your project |
 | README.md | this file, the one you are reading |
 | webpack.config.js | configuration file for `webpack` |
-   
+
 ## `dist/` files
 | File | Description |
 | --- | --- |
@@ -100,9 +118,9 @@ npm run server:basic
 | bs-logo-wht.svg | XXX |
 | `dist/js`         |
 | cheatsheet.js   | XXX |
-  
-## NPM Scripts   
-  
+
+## NPM Scripts
+
 | Tested | Scripts | Command | Description |
 | --- | --- | --- | --- |
 | Y | Sass / Scss  |  |  |
@@ -127,37 +145,42 @@ npm run server:basic
 | Y | Project      |  |  |
 | Y | `project:build` | npm-run-all compile:sass blable:js | runs both compile sass and blabble javascript |
 | Y | Test         |  |  |
-| Y | `test:simple`   | "echo Test" | no tests yet |  
-  
+| Y | `test:simple`   | "echo Test" | no tests yet |
+
 <br /><hr color="black" width="75%"/><br />
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>  
-  
-|                                           |                   |                                |                                        | 
+# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>
+
+|                                           |                   |                                |                                        |
 | ---                                       | ---               | ---                            |  ---                                   |
 | [VS Code](https://code.visualstudio.com/) |                   |                                |                                        |
-|                                           | beautify          | auto close tag                 | open in default browser                | 
-|                                           | emmet             | auto rename tag                | npm intellisense                       | 
-|                                           | bs5 snippets      | color highlighter              |                                        | 
+|                                           | open in default browser | Markdown All in One            | Editorconfig for VSCode                |
+| Bootstrap5 & FA Snippets                  | npm               | color highlighter              | CSS Peak                               |
+|                                           | npm intellisense  |                                |                                        |
+| Javascript Snippet Pack                   | beautify          | auto close tag                 |                                        |
+| Javascript(ES6) Code snippets             | emmet             | auto rename tag                | SVG                                    |
 |                                           |                   |                                |                                        |
 | [Git](https://git-scm.com/)               | git-Bash          | [git-Hub](https://github.com/) | [SSH](https://www.ssh.com/academy/ssh) |
-| [NPM](https://www.npmjs.com/)             | npm-run-all       | node.js                        | nodemon *not yet                       |
+| [npm](https://www.npmjs.com/)             | npm-run-all       | node.js                        | nodemon *not yet                       |
 |                                           |                   |                                |                                        |
 | [Bootstrap](https://www.getbootstrap.com/)|                   |                                |                                        |
 | [Bootstrap icons](https://icons.getbootstrap.com/)      |     |                                |                                        |
 | [Bootswatch](https://www.bootswatch.com)  |                   |                                |                                        |
-| [BS5-Examples](https://getbootstrap.com/docs/5.1/examples/)   |    |                      |                                        |
+| [BS5-Examples](https://getbootstrap.com/docs/5.1/examples/)   |         |                      |                                        |
 |                                           |                   |                                |                                        |
 | WebPack                                   | webpack-cli       | webpack-dev-server             |                                        |
 | Babel                                     |                   |                                |                                        |
 | Sass                                      | autoprefixer      | postcss                        | stylelint                              |
-    
+
 * [CDN finder](https://cdnjs.com)
 * [Google fonts](https://fonts.google.com)
-* [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)  
-* [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)  
-     
+* [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)
+* [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)
+
+
+
 <br /><hr color="black" width="75%"/><br />
+
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Recreate this project</p>
 
 ## Create folder structure
@@ -178,12 +201,12 @@ npm run server:basic
 > npm i --save bootstrap bootstrap-icons
 > npm i -D webpack webpack-cli webpack-dev-server
 > npm i -D sass autoprefixer
-> npm i -D stylelint stylelint-config-twbs-bootstrap 
+> npm i -D stylelint stylelint-config-twbs-bootstrap
 > npm i -D postcss postcss-cli
 > npm i -D @babel/core @babel/preset-env babel-loader
 > npm i -D copy-webpack-plugin
 ```
-## package.json 
+## package.json
 ``` shell
   package.json contents...
 ```
@@ -199,7 +222,7 @@ devServer: {
       port: 9000,
     },
 ```
-  
+
 ## Git-hub setup
 ```
 1 create git-hub account
@@ -219,17 +242,19 @@ devServer: {
 > git remote add origin <ssh_url>
 > git push -u origin main
 ```
+
+
 <br /><hr color="black" width="75%"/><br />
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Credits</p>
 
-<p> This github follows several similar projects, pulling my favorite parts from each. I believe most are based on the original (npm-starter) git-hub project created by @mdo, creator of bootstrap itself. All credit can go to him and the many brilliant people who taught me how to do, what I present to you here.
+<p> This github follows several YouTube tutorials, pulling my favorite parts from each. I believe most are based on the original (npm-starter) git-hub project created by @mdo, creator of bootstrap itself. All credit can go to him and the many brilliant people who taught me how to do, what I present to you here.
 </p>
 
-<p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people who can do these things for themselves (maybe better). Then there are those who can explain these complex subjects in a simple to understand way. 
+<p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people who can do these things for themselves (maybe better). Then there are those who can explain these complex subjects in a simple to understand way.
 <br /> Here are a few of them:
-</p>  
+</p>
 <ul>
-  <li>Beau - freeCodeCamp.org</li>  
+  <li>Beau - freeCodeCamp.org</li>
   <li>Brad - Traversy Media</li>
   <li>Kevin - Kevin Powell</li>
   <li>Kyle - Web Dev Simplified</li>
