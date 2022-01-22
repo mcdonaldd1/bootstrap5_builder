@@ -35,10 +35,6 @@ module.exports = [{
       publicPath: './dist/js'
     },
     module: {
-      loaders: [{
-        test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
-        loader: "file"
-      }],
       rules: [{
           test: /\.js$/,
           exclude: /(node_modules)/,
@@ -48,6 +44,10 @@ module.exports = [{
               presets: ['@babel/env']
             }
           }]
+        },
+        {
+          test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+          loader: "file"
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,

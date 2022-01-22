@@ -2,7 +2,7 @@
   "name": "bootstrap5_builder",
   "version": "1.0.0",
   "private": true,
-  "description": "Template site used to create custom sites based on bootstrap5",
+  "description": "Templating and Theming site used to create custom sites, based on bootstrap5",
   "author": "Dan McDonald",
   "license": "MIT",
   "main": "./src/js/main.js",
@@ -16,7 +16,10 @@
     "Bootstrap icons",
     "npm",
     "webpack",
-    "project",
+    "sass",
+    "scss",
+    "babel",
+    "web project",
     "workflow"
   ],
   "scripts": {

@@ -9,28 +9,34 @@
 
 <br /><hr color="black" width="75%"/><br />
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Usage</p>
-
+# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Clone and Install the repository</p>  
+  
 ```shell
-# Clone the repo
-git clone https://github.com/mcdonaldd1/bootstrap5_builder.git
-cd bootstrap5_builder
-
-# Install dependencies
-npm i
-
-# Compile Sass
-npm run css-compile
-
-# Watch Sass for changes (uses nodemon)
-npm run watch
-
-# Start local server (uses sirv-cli)
-npm run server
-
-# Watches Sass for changes and starts a local server
-npm start
+> git clone https://github.com/mcdonaldd1/bootstrap5_builder.git
+> cd bootstrap5_builder
+> npm i
 ```
+
+# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Run Initial Scripts</p>  
+  
+```shell
+# Compile Sass
+npm run compile:sass
+
+# Bundle and Minimize Javascript
+npm run pack:js
+
+# Start Server
+npm run server:basic
+```
+# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Open site in browser - open devtools</p>  
+  
+[Cheatsheet](http://localhost:9000/cheatsheet.html)  
+[npm-starter](http://localhost:9000/npm-starter.html)  
+[my-starter](http://localhost:9000/starter.html)  
+[theming-kit](http://localhost:9000/theming.html)  
+* Hit F12 or Ctrl-Shift-I (in Chrome or FireFox) to open up dev-tools
+
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Summary</p>  
 
@@ -87,31 +93,31 @@ npm start
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Scripts</p>  
   
-| Scripts | Command | Description |
-| --- | --- | --- |
-| Sass / Scss |  |  |
-| `watch:sass`:  | sass --watch src/scss:dist/css |transpile contents of src/sass folder into dist/css, every time you save sass. Ctrl-C to end. |
-| `compile:sass`:| sass src/scss:dist/css" |transpile contents of src/sass folder into dist/css, once. Run when you need it. |
-| `swatch:sass`:| sass src/swatches:dist/css" |transpile contents of src/swatches folder into dist/css, once. Run when you need it. |
-| css |  |  |
-| `lint:css`:  | stylelint ./src/sass/ | Lints sass/scss/css with bootstraps default linting sheet. Lint before transpiling.|
-| `prefix:css`:| postcss --replace ./style.css --use autoprefixer | prefixes any style:rule it finds that needs it. Prefix after transpiling |
-| Reset |  |  |
-| `reset:all`  |  |  |
-| `reset:html` |  |  |
-| `reset:scss` |  |  |
-| `reset:js`   |  |  |
-| Javascript |  |  |
-| `bundle:js`:   | webpack --config-name bundle |compile content of src/js folder into dist/js folder, creating bundle.js |
-| `pack:js`:     | webpack --config-name pack |compile content of src/js folder into dist/js folder, and minify it, creating bundle.min.js |
-| `blable:js`:   | webpack --config-name blable |compiles, minifize and downgrades ES6+ code to ES5, creating bundle.blable.js|
-| Server | --- | --- |
-| `project:build` | npm-run-all compile:sass blable:js | runs both compile sass and blabble javascript |
-| `server:basic`:  | webpack-dev-server | runs a local webserver at http://localhost:9000, uses dist/ as root |
-| `server:dev`:  | webpack-dev-server --config-name bundle | runs local server and updates project at each save.|
-| Test | --- | --- |
-| `test:simple` | "echo Test" | no tests yet |
-
+| Tested | Scripts | Command | Description |
+| --- | --- | --- | --- |
+| Y | Sass / Scss |  |  |
+| Y | `watch:sass`:  | sass --watch src/scss:dist/css |transpile contents of src/sass folder into dist/css, every time you save sass. Ctrl-C to end. |
+| Y | `compile:sass`:| sass src/scss:dist/css" |transpile contents of src/sass folder into dist/css, once. Run when you need it. |
+| Y | `swatch:sass`:| sass src/swatches:dist/css" |transpile contents of src/swatches folder into dist/css, once. Run when you need it. |
+| X | css |  |  |
+|XXX| `lint:css`:  | stylelint ./src/sass/ | Lints sass/scss/css with BS5 default linting sheet. Lint before transpiling.|
+| X | `prefix:css`:| postcss --replace ./style.css --use autoprefixer | prefixes any style:rule it finds that needs it. Prefix after transpiling |
+| X | Reset |  |  |
+| X | `reset:all`  |  |  |
+| X | `reset:html` |  |  |
+| X | `reset:scss` |  |  |
+| X | `reset:js`   |  |  |
+| Y | Javascript |  |  |
+| Y | `bundle:js`:   | webpack --config-name bundle |compile content of src/js folder into dist/js folder, creating bundle.js |
+| Y | `pack:js`:     | webpack --config-name pack |compile content of src/js folder into dist/js folder, and minify it, creating bundle.min.js |
+| Y | `blable:js`:   | webpack --config-name blable |compiles, minifize and downgrades ES6+ code to ES5, creating bundle.blable.js|
+| X | Server | --- | --- |
+| Y | `project:build` | npm-run-all compile:sass blable:js | runs both compile sass and blabble javascript |
+| Y | `server:basic`:  | webpack-dev-server | runs a local webserver at http://localhost:9000, uses dist/ as root |
+| X | `server:dev`:  | webpack-dev-server --config-name bundle | runs local server and updates project at each save.|
+| Y | Test | --- | --- |
+| Y | `test:simple` | "echo Test" | no tests yet |  
+  
 <br /><hr color="black" width="75%"/><br />
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>
@@ -141,66 +147,7 @@ npm start
 | [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css) |  |  |  |
 
 * [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)  
-  
-<br /><hr color="black" width="75%"/><br />
-
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Folder and File List</p>
-  
-
-## `dist/`  
-template files with correct script and link tags: 
-* index.html
-* theming.html
-  
-### `css/`  
-empty to start - the rest will be generated - DO NOT EDIT 
-* style.css  
-* style.css.map  
-* swatch-theme.css  
-* swatch-theme.css.map  
-  
-### `img/`  
-empty to start  
-  
-### `js/`  
-empty to start - the rest will be generated - DO NOT EDIT
-* bundle.blab.js  
-* bundle.blab.js.LICENSE.txt  
-* bundle.min.js  
-* bundle.min.js.LICENSE.txt  
-* bundle.js  
-* bundle.js.LICENSE.txt  
-  
-## `src/`  
-### `assets/`  
-### `fonts/`  
-`fonts/Montserrat/`  
-* Montserrat-Italic-VariableFont_wght.ttf 
-* Montserrat-VariableFont_wght.ttf  
-  
-### `js/`  
-* main.js  
-* mymodule.js  
-  
-### `reset`  
-* _custom.scss
-* _icon-list.scss  
-* style.scss  
-* index.html  
-* theming.html  
-* main.js  
-* mymodule.js  
-  
-### `sass/`  
-* _custom.scss  
-* _icon-list.scss  
-* style.scss   
-  
-### `swatches/`  
-  * _theme_variables.scss  
-  * _theme_bootswatch.scss
-  * swatch-theme.scss  
-    
+     
 <br /><hr color="black" width="75%"/><br />
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Recreate this project</p>
