@@ -1,13 +1,10 @@
-<!--
-  Do NOT read this file directly.
-  It is created in mark down and should be viewed in a previewer.
-  right-click on the file and choose 'view in preview'
--->
-<p style="text-align: center; font-size:24pt; font-weight: bold; color: red">Bootstrap5 builder</p>
-<p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Template-Site used to manage a custom <u>bootstrap 5</u> project</p>
-<p style="text-align: center; font-size:24pt; font-weight: bold; color: red">*** This project is considered incomplete until this warning is removed ***</p>
+<!-- Do NOT read this file directly. It is created in mark down and should be viewed in a previewer. right-click on the file and choose 'view in preview' -->
 
-<br /><hr color="black" width="75%"/><br />
+# Bootstrap5 builder
+## Template-Site used to manage a custom `Bootstrap5` project
+## *** This project is considered incomplete until this warning is removed ***
+<br /><hr style="color: grey; width: 50%; text-size: 1rem"/><br />
+
 
 # Setup Bootstrap5 Builder
 
@@ -23,13 +20,13 @@
 ## 3) Run setup scripts
 ```shell
 # Compile Sass
-npm run compile:sass
+> npm run compile:sass
 
 # Bundle and Minimize Javascript
-npm run pack:js
+> npm run pack:js
 
 # Start Server
-npm run server:basic
+> npm run server:basic
 ```
 
 ## 4) Open html pages in browser
@@ -39,41 +36,42 @@ npm run server:basic
 
 [npm-starter: http://localhost:9000/npm-starter.html](http://localhost:9000/npm-starter.html)
 
-[my-starter: http://localhost:9000/starter.html](http://localhost:9000/starter.html)
+[starter: http://localhost:9000/starter.html](http://localhost:9000/starter.html)
 
 [theming-kit: http://localhost:9000/theming.html](http://localhost:9000/theming.html)
 
 * Hit F12 or Ctrl-Shift-I (in Chrome or FireFox) to open up dev-tools
 
-
-
 <br /><hr color="black" width="75%"/><br />
 
 # Basic Usage and Ideas
 
-## 1) Edit `sass/scss` and compile to `css`.
-## 2) Edit `Javascript` and bundle / minimize it.
-## 3) Babel Javascript and bundle / minimize it.
-## 4) Edit `HTML`
-## 5) Create Custom Themes using `theming` to site
-## 6) use Google fonts
-## 7) use Bootstrap Icons
-## 8) add FontAwesome Icons
-## 9) add JQuery library
-## 10) add animation.css library
-## 11) add d3.js library
-## 9) Download and Complile `Bootswatches`
-## 10) Download and Explore `Examples`
-## 11) `Reset` the project or `Export` the project ready for deployment.
-## 12) Use the `load style sheet` selector tool. Add it to any page.
+### 01) Edit `sass/scss` and `transpile` to `css`.
+### 02) Edit `Javascript` and `bundle` / `minimize` it.
+### 03) `Babel` Javascript down to ES5 standards.
+### 04) Edit `HTML`.
+### 05) Create Custom Themes using `theming` page.
+### 06) Use `Google fonts`
+### 07) Use `Bootstrap Icons`
+### 08) Add `FontAwesome Icons`
+### 09) Add `JQuery` library
+### 10) Add `animation.css` library
+### 11) Add `d3.js` library
+### 12) Download and Complile `Bootswatches`
+### 13) Download and Explore `Examples`
+### 14) `Reset` the project or `Export` the project ready for deployment.
+### 15) Use the `load style sheet` selector tool. Add it to any page.
+### 16) Use `CDNs` to deliver most content. No bootstrap local imports. Only custom code.
+### 17) Use `partials` and `modules` to only import the parts of Bootstrap5 you need. Run it lean.
+### 18) Load up a heavy site. One that is over developed and super functional. You'll never deploy it. Just have fun.
 
 
 <br /><hr color="black" width="75%"/><br />
 
-# Summary section
+
+# Folders and files
 
 ## Root Folders
-
 | Root       | Folder          | subfolders         | Description                                                                                                                                                                                          |
 | ---------- | --------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `builder/` |                 |                    | The root folder that holds project and build related files.                                                                                                                                          |
@@ -102,27 +100,30 @@ npm run server:basic
 | .gitignore        | list of folders and files to be ignored (not watched) by `git`.                                                                                                  |
 | .stylelintignore  | list of folders and files to be ignored (not watched) by `stylelint`                                                                                             |
 | .stylelintrc      | `stylelint` uses this file to load specific linters. This project uses the official Bootstrap5 linter.                                                           |
-| LICENSE.md        | standard license file                                                                                                                                            |
+| babel.config.json        | config file for babel                                  |
+| LICENSE.md        | standard icense                                        |
 | package-lock.json | system file you should ignore                                                                                                                                    |
 | package.json      | main configuration file for npm, and your project                                                                                                                |
 | README.md         | this file, the one you are reading                                                                                                                               |
 | webpack.config.js | configuration file for `webpack`                                                                                                                                 |
 
 ## `dist/` files
-| File             | Description |
-| ---------------- | ----------- |
-| cheatsheet.html  | XXX         |
-| npm-starter.html | XXX         |
-| starter.html     | XXX         |
-| theming.html     | XXX         |
-| `dist/css`       |
-| cheatsheet.css   | XXX         |
-| `dist/img`       |
-| bs-logo-wht.svg  | XXX         |
-| `dist/js`        |
-| cheatsheet.js    | XXX         |
+| File                  | Description                          |
+| --------------------- | ------------------------------------ |
+| _load-style-sheet.htm | example of css-stylesheet-loader     |
+| cheatsheet.html       | XXX                                  |
+| npm-starter.html      | XXX                                  |
+| starter.html          | XXX                                  |
+| theming.html          | XXX                                  |
+| `dist/css`            |
+| cheatsheet.css        | XXX                                  |
+| `dist/img`            |
+| bs-logo-wht.svg       | XXX                                  |
+| `dist/js`             |
+| cheatsheet.js         | XXX                                  |
+| cssselector.js        | javascript for css-stylesheet-loader |
 
-## NPM Scripts
+# NPM Scripts
 
 | Tested | Scripts         | Command                                          | Description                                                                                   |
 | ------ | --------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
@@ -152,13 +153,13 @@ npm run server:basic
 
 <br /><hr color="black" width="75%"/><br />
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Technology List</p>
+# Technology List
 
-|                                                             |                         |                                |                                        |
-| ----------------------------------------------------------- | ----------------------- | ------------------------------ | -------------------------------------- |
+|                    |                         |                                |                                        |
+| ------------------ | ----------------------- | ------------------------------ | -------------------------------------- |
 | [VS Code](https://code.visualstudio.com/)                   |                         |                                |                                        |
-|                                                             | open in default browser | Markdown All in One            | Editorconfig for VSCode                |
-| Bootstrap5 & FA Snippets                                    | npm                     | color highlighter              | CSS Peak                               |
+|                                                             | open in default browser |                                | Editorconfig for VSCode                |
+| Bootstrap5 Snippets                                    | npm                     | color highlighter              | CSS Peak                               |
 |                                                             | npm intellisense        |                                |                                        |
 | Javascript Snippet Pack                                     | beautify                | auto close tag                 |                                        |
 | Javascript(ES6) Code snippets                               | emmet                   | auto rename tag                | SVG                                    |
@@ -180,16 +181,15 @@ npm run server:basic
 * [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)
 * [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)
 
-
-
 <br /><hr color="black" width="75%"/><br />
+
 
 # <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Recreate this project</p>
 
 ## Create folder structure
 ```shell
-> md project_folder
-> cd project_folder
+> mkdir builder
+> cd builder
 ```
 ## Create files and copy templates
 ```shell
@@ -215,8 +215,9 @@ npm run server:basic
 ```
 
 ## webpack.config.js entries
+
+### webpack-dev-server config entries
 ``` shell
-webpack.config.js contents...
 devServer: {
       static: {
         directory: path.join(__dirname, 'dist'),
@@ -245,17 +246,14 @@ devServer: {
 > git remote add origin <ssh_url>
 > git push -u origin main
 ```
-
-
 <br /><hr color="black" width="75%"/><br />
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Credits</p>
 
+
+# Credits
 <p> This github follows several YouTube tutorials, pulling my favorite parts from each. I believe most are based on the original (npm-starter) git-hub project created by @mdo, creator of bootstrap itself. All credit can go to him and the many brilliant people who taught me how to do, what I present to you here.
 </p>
-
 <p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people who can do these things for themselves (maybe better). Then there are those who can explain these complex subjects in a simple to understand way.
 <br /> Here are a few of them:
-</p>
 <ul>
   <li>Beau - freeCodeCamp.org</li>
   <li>Brad - Traversy Media</li>
@@ -264,7 +262,7 @@ devServer: {
   <li>Mosh - Programming with Mosh</li>
   <li>Tim - Tech with Tim</li>
 </ul>
-
+</p>
 
 ## Copyright
 &copy; Dan McDonald 2022-2023 and licensed MIT.
