@@ -100,8 +100,8 @@
 | .gitignore        | list of folders and files to be ignored (not watched) by `git`.                                                                                                  |
 | .stylelintignore  | list of folders and files to be ignored (not watched) by `stylelint`                                                                                             |
 | .stylelintrc      | `stylelint` uses this file to load specific linters. This project uses the official Bootstrap5 linter.                                                           |
-| babel.config.json        | config file for babel                                  |
-| LICENSE.md        | standard icense                                        |
+| babel.config.json | config file for babel                                                                                                                                            |
+| LICENSE.md        | standard icense                                                                                                                                                  |
 | package-lock.json | system file you should ignore                                                                                                                                    |
 | package.json      | main configuration file for npm, and your project                                                                                                                |
 | README.md         | this file, the one you are reading                                                                                                                               |
@@ -122,6 +122,18 @@
 | `dist/js`             |
 | cheatsheet.js         | XXX                                  |
 | cssselector.js        | javascript for css-stylesheet-loader |
+
+## `src/` files
+### `assets/`
+### `fonts/`
+### `js/`
+### `reset/`
+### `sass/`
+### `swatches/`
+### `assets/`
+*
+
+
 
 # NPM Scripts
 
@@ -155,27 +167,52 @@
 
 # Technology List
 
-|                    |                         |                                |                                        |
-| ------------------ | ----------------------- | ------------------------------ | -------------------------------------- |
-| [VS Code](https://code.visualstudio.com/)                   |                         |                                |                                        |
-|                                                             | open in default browser |                                | Editorconfig for VSCode                |
-| Bootstrap5 Snippets                                    | npm                     | color highlighter              | CSS Peak                               |
-|                                                             | npm intellisense        |                                |                                        |
-| Javascript Snippet Pack                                     | beautify                | auto close tag                 |                                        |
-| Javascript(ES6) Code snippets                               | emmet                   | auto rename tag                | SVG                                    |
-|                                                             |                         |                                |                                        |
-| [Git](https://git-scm.com/)                                 | git-Bash                | [git-Hub](https://github.com/) | [SSH](https://www.ssh.com/academy/ssh) |
-| [npm](https://www.npmjs.com/)                               | npm-run-all             | node.js                        | nodemon *not yet                       |
-|                                                             |                         |                                |                                        |
-| [Bootstrap](https://www.getbootstrap.com/)                  |                         |                                |                                        |
-| [Bootstrap icons](https://icons.getbootstrap.com/)          |                         |                                |                                        |
-| [Bootswatch](https://www.bootswatch.com)                    |                         |                                |                                        |
-| [BS5-Examples](https://getbootstrap.com/docs/5.1/examples/) |                         |                                |                                        |
-|                                                             |                         |                                |                                        |
-| WebPack                                                     | webpack-cli             | webpack-dev-server             |                                        |
-| Babel                                                       |                         |                                |                                        |
-| Sass                                                        | autoprefixer            | postcss                        | stylelint                              |
+## [VS Code](https://code.visualstudio.com/)
+* Bootstrap5 Snippets
+* open in default browser
+* EditorConfig for VSCode
+* npm
+* npm intellisense
+* css peak
+* color highlighter
+* Beautify
+* Auto-close tags
+* Auto-rename tags
+* Emmet (built-in)
+* Javascript Snippet Pack
+* Javascript(ES6) Code snippets
+* svg
 
+## Git
+* [Git](https://git-scm.com/)
+* [git-Hub](https://github.com/)
+* git-bash
+* [SSH](https://www.ssh.com/academy/ssh)
+
+## Bootstrap
+* [Bootstrap](https://www.getbootstrap.com/)
+* [Bootstrap icons](https://icons.getbootstrap.com/)
+* [BS5-Examples](https://getbootstrap.com/docs/5.1/examples/)
+* [Bootswatch](https://www.bootswatch.com)
+
+## Node
+* [npm](https://www.npmjs.com/)
+* nodemon (not implemented)
+
+## NPM packages, loaders, etc.
+* npm-run-all
+* babel
+* sass
+* postcss
+* autoprefixer
+* stylelint
+
+## Webpack
+* webpack
+* webpack-dev-server
+* webpack-cli
+
+## Web based tools
 * [CDN finder](https://cdnjs.com)
 * [Google fonts](https://fonts.google.com)
 * [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)
@@ -184,7 +221,7 @@
 <br /><hr color="black" width="75%"/><br />
 
 
-# <p style="text-align: center; font-size:16pt; font-weight: normal; color: orange">Recreate this project</p>
+# Recreate this project
 
 ## Create folder structure
 ```shell
@@ -253,8 +290,8 @@ devServer: {
 <p> This github follows several YouTube tutorials, pulling my favorite parts from each. I believe most are based on the original (npm-starter) git-hub project created by @mdo, creator of bootstrap itself. All credit can go to him and the many brilliant people who taught me how to do, what I present to you here.
 </p>
 <p> The following are YouTube educators that I wish to express a bit of gratitude towards. Thanks to them for providing hundreds of hours of quality, valuable AND FREE educational resources. There are a lot of people who can do these things for themselves (maybe better). Then there are those who can explain these complex subjects in a simple to understand way.
-<br /> Here are a few of them:
-<ul>
+
+<ul> Thank you to the following:
   <li>Beau - freeCodeCamp.org</li>
   <li>Brad - Traversy Media</li>
   <li>Kevin - Kevin Powell</li>
