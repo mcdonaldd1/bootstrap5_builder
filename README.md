@@ -44,9 +44,10 @@
 
 <br /><hr color="black" width="75%"/><br />
 
-# Basic Usage and Ideas
+# Basic Usage and Ideas to try
 
 ### 01) Edit `sass/scss` and `transpile` to `css`.
+### 02) Add a `_module.scss` to the sass workflow. Lookup `7-1 Sass architecture`.
 ### 02) Edit `Javascript` and `bundle` / `minimize` it.
 ### 03) `Babel` Javascript down to ES5 standards.
 ### 04) Edit `HTML`.
@@ -57,10 +58,10 @@
 ### 09) Add `JQuery` library
 ### 10) Add `animation.css` library
 ### 11) Add `d3.js` library
-### 12) Download and Complile `Bootswatches`
-### 13) Download and Explore `Examples`
+### 12) Download and Complile `Bootswatches`. There are not many of them, try them all.
+### 13) Download and Explore `Examples`. Use the `example-index.html` page to browse them.
 ### 14) `Reset` the project or `Export` the project ready for deployment.
-### 15) Use the `load style sheet` selector tool. Add it to any page.
+### 15) Use the `load-style-sheet` selector tool. Add it to any page.
 ### 16) Use `CDNs` to deliver most content. No bootstrap local imports. Only custom code.
 ### 17) Use `partials` and `modules` to only import the parts of Bootstrap5 you need. Run it lean.
 ### 18) Load up a heavy site. One that is over developed and super functional. You'll never deploy it. Just have fun.
@@ -72,40 +73,45 @@
 # Folders and files
 
 ## Root Folders
-| Root       | Folder          | subfolders         | Description                                                                                                                                                                                          |
-| ---------- | --------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `builder/` |                 |                    | The root folder that holds project and build related files.                                                                                                                                          |
-|            | `dist/`         |                    | Contains all site related files. This folder can be deployed to a live site.                                                                                                                         |
-|            |                 | `css/`             | #                                                                                                                                                                                                    |
-|            |                 | `img/`             | #                                                                                                                                                                                                    |
-|            |                 | `js/`              | #                                                                                                                                                                                                    |
-|            | `node_modules/` |                    | Contains all installed dependencies of the project <br /> `Do not edit these files` but you will link to or import some of them.                                                                     |
-|            |                 | `bootstrap/`       | #                                                                                                                                                                                                    |
-|            |                 | `bootstrap-icons/` | #                                                                                                                                                                                                    |
-|            | `src/`          |                    | Contain all custom source files. You `WILL edit some, but not all,` of the contents. <br /> Anything you download will be put into one of it's sub directories. <br /> This is the `working` folder. |
-|            |                 | `assets/`          | #                                                                                                                                                                                                    |
-|            |                 | `fonts/`           | #                                                                                                                                                                                                    |
-|            |                 | `js/`              | #                                                                                                                                                                                                    |
-|            |                 | `reset/`           | #                                                                                                                                                                                                    |
-|            |                 | `sass/`            | #                                                                                                                                                                                                    |
-|            |                 | `swatches/`        | #                                                                                                                                                                                                    |
-| #          | #               | #                  | #                                                                                                                                                                                                    |
+| Root       | Folder          | subfolders         | Description                                                                  |
+| ---------- | --------------- | ------------------ |----------------------------------------------------------------------------- |
+| `builder/` |                 |                    | The root folder that holds project and build related files.                  |
+|            | `dist/`         |                    | Contains all site related files.                                             |
+|            |                 | `css/`             | #                                                                            |
+|            |                 | `img/`             | #                                                                            |
+|            |                 | `js/`              | #                                                                            |
+|            | `node_modules/` |                    | Contains all installed dependencies of the project.                          |
+|            |                 | `bootstrap/`       | #                                                                            |
+|            |                 | `bootstrap-icons/` | #                                                                            |
+|            | `src/`          |                    | Contain all custom source files.                                             |
+|            |                 | `assets/`          | #                                                                            |
+|            |                 | `fonts/`           | #                                                                            |
+|            |                 | `js/`              | #                                                                            |
+|            |                 | `reset/`           | #                                                                            |
+|            |                 | `sass/`            | #                                                                            |
+|            |                 | `swatches/`        | #                                                                            |
 
 
 ## `builder/` files
-| File              | Description                                                                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .browserslistrc   | `Postcss` uses this to target browsers it will or won't support. <br /> `autoprefixer` will only prefix the code neede to support the listed browsers. `F... IE` |
-| .editorconfig     | Used to overide existing settings on 'editorconfig' aware editors and ide's. <br /> In VSCode install the extension `EditorConfig for VSCode`                    |
-| .gitignore        | list of folders and files to be ignored (not watched) by `git`.                                                                                                  |
-| .stylelintignore  | list of folders and files to be ignored (not watched) by `stylelint`                                                                                             |
-| .stylelintrc      | `stylelint` uses this file to load specific linters. This project uses the official Bootstrap5 linter.                                                           |
-| babel.config.json | config file for babel                                                                                                                                            |
-| LICENSE.md        | standard icense                                                                                                                                                  |
-| package-lock.json | system file you should ignore                                                                                                                                    |
-| package.json      | main configuration file for npm, and your project                                                                                                                |
-| README.md         | this file, the one you are reading                                                                                                                               |
-| webpack.config.js | configuration file for `webpack`                                                                                                                                 |
+| File              | Description                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------------- |
+| .browserslistrc   | `Postcss` and `autoprefixer` use this to target browsers it will or won't support.          |
+| .editorconfig     | Used to overide existing settings on 'editorconfig' aware editors and ide's.                |
+| .gitignore        | list of folders and files to be ignored (not watched) by `git`.                             |
+| .stylelintignore  | list of folders and files to be ignored (not watched) by `stylelint`                        |
+| .stylelintrc      | `stylelint` uses this file to load specific linters.                                        |
+| babel.config.json | config file for babel                                                                       |
+| LICENSE.md        | standard icense                                                                             |
+| package-lock.json | system file you should ignore                                                               |
+| package.json      | main configuration file for npm, and your project                                           |
+| README.md         | this file, the one you are reading                                                          |
+| webpack.config.js | configuration file for `webpack`                                                            |
+
+## test table
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|
+
 
 ## `dist/` files
 | File                  | Description                          |
