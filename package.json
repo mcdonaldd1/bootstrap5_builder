@@ -6,7 +6,6 @@
   "author": "Dan McDonald",
   "license": "MIT",
   "main": "./src/js/main.js",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcdonaldd1/bootstrap5_builder.git"

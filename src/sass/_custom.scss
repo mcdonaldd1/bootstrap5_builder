@@ -11,7 +11,7 @@ $body-color: hsl(0, 0%, 20%);
 
 // 4) FONT IMPORTS
 @font-face {
-  font-family: 'Montserrat' 'sans-serif';
+  font-family: 'Montserrat';
   src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
 }
 // here is an alternate way of importing fonts
@@ -19,7 +19,7 @@ $body-color: hsl(0, 0%, 20%);
 
 // 5) CUSTOM STYLES
 body {
-  font-family: Montserrat;
+  font-family: Montserrat sans-serif;
   padding: 3rem 1.5rem;
 }
 
