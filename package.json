@@ -38,6 +38,9 @@
     "project:build": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
     "server:dev": "webpack-dev-server --config-name blable",
+    "bs5:css:min": "sass ./src/sass/bs5/bootstrap.min.scss:./dist/css/bootstrap.min.css",
+    "bs5:css:reg": "sass ./src/sass/bs5/bootstrap.scss:./dist/css/bootstrap.css",
+    "bs5:css:chtsht": "sass ./src/sass/bs5/cheatsheet.scss:./dist/css/cheatsheet.css",
     "test:simple": "echo Test"
   },
   "dependencies": {

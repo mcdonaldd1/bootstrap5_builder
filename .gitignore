@@ -1,6 +1,11 @@
 node_modules
-reset
 swatches
 dist
 fonts
+icons-bs5
 examples
+reset
+src/sass/bs5
+src/icons
+src/svg
+sass/bs5
