@@ -108,9 +108,9 @@
 | webpack.config.js | configuration file for `webpack`                                                            |
 
 ## test table
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-| - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
-|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|XXX|
 
 
 ## `dist/` files
