@@ -23,27 +23,32 @@
     "workflow"
   ],
   "scripts": {
-    "watch:sass": "sass --watch ./src/sass:./dist/css",
-    "compile:sass": "sass ./src/sass:./dist/css",
-    "swatch:sass": "sass ./src/swatches:./dist/css",
-    "lint:css": "stylelint ./src/sass/",
-    "prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
     "bundle:js": "webpack --config-name bundle",
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",
-    "reset:all": "npm-run-all reset:html reset:scss reset:js",
-    "reset:html": "node ./src/reset/reset-html.js",
-    "reset:scss": "echo Reset scss",
-    "reset:js": "echo Reset js",
+
+    "copy:html": "copyfiles -f -s ./src/html/*.html ./dist",
+    "copy:fonts:all": "copyfiles -f -s ./src/html/*.html ./dist",
+    "copy:fonts:bs5": "copyfiles -f -s ./src/html/*.html ./dist",
+    "copy:fonts:google": "copyfiles -s ./src/fonts_google/*.tff ./dist/fonts",
+
     "project:build": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
-    "server:dev": "webpack-dev-server --config-name blable",
-    "bs5:css:min": "sass ./src/reset/bootstrap.min.scss:./dist/css/bootstrap.min.css",
-    "bs5:css:reg": "sass ./src/reset/bootstrap.scss:./dist/css/bootstrap.css",
-    "bs5:css:chtsht": "sass ./src/reset/cheatsheet.scss:./dist/css/cheatsheet.css",
-    "bs5:css:icons": "sass ./src/reset/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
-    "bs5:css:all": "npm-run-all bs5:css:min bs5:css:chtsht bs5:css:icons",
-    "test:simple": "node ./src/reset/test.js"
+
+    "prefix:css": "postcss --replace dist/css/style.css --use autoprefixer --map",
+    "lint:css": "stylelint ./src/sass/",
+
+    "sass:dev:all": "sass ./src/sass:./dist/css",
+    "sass:dev:watch": "sass --watch ./src/sass:./dist/css",
+    "sass:dev:style": "sass ./src/sass/style.scss:./dist/css/style.css",
+    "sass:bs5:all": "npm-run-all sass:bs5:min sass:bs5:cs sass:bs5:icons",
+    "sass:bs5:min": "sass --style=compressed ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.min.css",
+    "sass:bs5:reg": "sass ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.css",
+    "sass:bs5:cs": "sass ./src/sass/vendors/cheatsheet.scss:./dist/css/cheatsheet.css",
+    "sass:bs5:icons": "sass ./node_modules/bootstrap-icons/font/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
+    "sass:swatch:all": "sass ./src/swatches:./dist/css",
+    "sass:swatch:darkly": "sass ./src/swatches/darkly_swatch.scss:./dist/css/darkly_swatch.css",
+    "test:simple": "node ./src/js/test.js"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
@@ -55,6 +60,7 @@
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.1",
+    "copyfiles": "^2.4.1",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",

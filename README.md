@@ -53,9 +53,6 @@
 ### `Bootstrap Icons`
 * google-fonts-readme.md
 
-### `FontAwesome Icons`
-* google-fonts-readme.md
-
 ## Theming
 ### `Theming page`
 *
@@ -66,24 +63,26 @@
 ### `load-style-sheet selector tool`
 *
 
-<hr width="50%">
-
+## Practice and Learn HTML, CSS and Javascript
 ### Edit `HTML`.
-
 ### Edit `sass/scss` and `transpile` to `css`.
 ### Add a `_module.scss` to the sass workflow. Lookup `7-1 Sass architecture`.
-
 ### Edit `Javascript` and `bundle` / `minimize` it.
 ### `Babel` Javascript down to ES5 standards.
 
+## Practice and Learn Bootstrap5
 ### Download and Explore `Examples`. Use the `example-index.html` page to browse them.
 
-### `Reset` the project or `Export` the project ready for deployment.
 
-### Use `CDNs` to deliver most content. No bootstrap local imports. Only custom code.
-### Use `partials` and `modules` to only import the parts of Bootstrap5 you need. Run it lean.
-### Load up a heavy site. One that is over developed and super functional. You'll never deploy it. Just have fun.
+## Build a site
+### `CDNs`
+### `local`
+### `Custom-Normal`
+### `Custom-Light`
+### `Custom-Heavy`
 
+
+## Add Animation
 ### Add `JQuery` library
 ### Add `animation.css` library
 ### Add `d3.js` library

@@ -1,8 +1,7 @@
 var path = require('path');
 const webpack = require('webpack');
 
-module.exports = [
-  {
+module.exports = [{
     name: 'bundle',
     entry: './src/js/main.js',
     mode: 'development',
