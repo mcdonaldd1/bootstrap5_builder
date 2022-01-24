@@ -32,16 +32,18 @@
     "pack:js": "webpack --config-name pack",
     "blable:js": "webpack --config-name blable",
     "reset:all": "npm-run-all reset:html reset:scss reset:js",
-    "reset:html": "webpack --config-name reset_html",
+    "reset:html": "node ./src/reset/reset-html.js",
     "reset:scss": "echo Reset scss",
     "reset:js": "echo Reset js",
     "project:build": "npm-run-all compile:sass blable:js",
     "server:basic": "webpack-dev-server",
     "server:dev": "webpack-dev-server --config-name blable",
-    "bs5:css:min": "sass ./src/sass/bs5/bootstrap.min.scss:./dist/css/bootstrap.min.css",
-    "bs5:css:reg": "sass ./src/sass/bs5/bootstrap.scss:./dist/css/bootstrap.css",
-    "bs5:css:chtsht": "sass ./src/sass/bs5/cheatsheet.scss:./dist/css/cheatsheet.css",
-    "test:simple": "echo Test"
+    "bs5:css:min": "sass ./src/reset/bootstrap.min.scss:./dist/css/bootstrap.min.css",
+    "bs5:css:reg": "sass ./src/reset/bootstrap.scss:./dist/css/bootstrap.css",
+    "bs5:css:chtsht": "sass ./src/reset/cheatsheet.scss:./dist/css/cheatsheet.css",
+    "bs5:css:icons": "sass ./src/reset/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
+    "bs5:css:all": "npm-run-all bs5:css:min bs5:css:chtsht bs5:css:icons",
+    "test:simple": "node ./src/reset/test.js"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

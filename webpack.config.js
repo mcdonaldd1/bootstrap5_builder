@@ -1,10 +1,7 @@
 var path = require('path');
 const webpack = require('webpack');
 
-module.exports = [{
-    name: 'reset_html',
-    entry: './src/reset/reset-html.js'
-  },
+module.exports = [
   {
     name: 'bundle',
     entry: './src/js/main.js',

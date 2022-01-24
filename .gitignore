@@ -1,11 +1,10 @@
 node_modules
-swatches
 dist
-fonts
-icons-bs5
 examples
 reset
-src/sass/bs5
-src/icons
+src/fonts_bs5
+src/fonts_google
+src/icons_bs5
 src/svg
-sass/bs5
+src/swatches
+src/html
