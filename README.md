@@ -46,26 +46,47 @@
 
 # Basic Usage and Ideas to try
 
-### 01) Edit `sass/scss` and `transpile` to `css`.
-### 02) Add a `_module.scss` to the sass workflow. Lookup `7-1 Sass architecture`.
-### 02) Edit `Javascript` and `bundle` / `minimize` it.
-### 03) `Babel` Javascript down to ES5 standards.
-### 04) Edit `HTML`.
-### 05) Create Custom Themes using `theming` page.
-### 06) Use `Google fonts`
-### 07) Use `Bootstrap Icons`
-### 08) Add `FontAwesome Icons`
-### 09) Add `JQuery` library
-### 10) Add `animation.css` library
-### 11) Add `d3.js` library
-### 12) Download and Complile `Bootswatches`. There are not many of them, try them all.
-### 13) Download and Explore `Examples`. Use the `example-index.html` page to browse them.
-### 14) `Reset` the project or `Export` the project ready for deployment.
-### 15) Use the `load-style-sheet` selector tool. Add it to any page.
-### 16) Use `CDNs` to deliver most content. No bootstrap local imports. Only custom code.
-### 17) Use `partials` and `modules` to only import the parts of Bootstrap5 you need. Run it lean.
-### 18) Load up a heavy site. One that is over developed and super functional. You'll never deploy it. Just have fun.
+## Fonts and Icons
+### `Google fonts`
+* google-fonts-readme.md
 
+### `Bootstrap Icons`
+* google-fonts-readme.md
+
+### `FontAwesome Icons`
+* google-fonts-readme.md
+
+## Theming
+### `Theming page`
+*
+
+### `Bootswatch`
+*
+
+### `load-style-sheet selector tool`
+*
+
+<hr width="50%">
+
+### Edit `HTML`.
+
+### Edit `sass/scss` and `transpile` to `css`.
+### Add a `_module.scss` to the sass workflow. Lookup `7-1 Sass architecture`.
+
+### Edit `Javascript` and `bundle` / `minimize` it.
+### `Babel` Javascript down to ES5 standards.
+
+### Download and Explore `Examples`. Use the `example-index.html` page to browse them.
+
+### `Reset` the project or `Export` the project ready for deployment.
+
+### Use `CDNs` to deliver most content. No bootstrap local imports. Only custom code.
+### Use `partials` and `modules` to only import the parts of Bootstrap5 you need. Run it lean.
+### Load up a heavy site. One that is over developed and super functional. You'll never deploy it. Just have fun.
+
+### Add `JQuery` library
+### Add `animation.css` library
+### Add `d3.js` library
 
 <br /><hr color="black" width="75%"/><br />
 
@@ -79,6 +100,7 @@
 |             | `dist/`         |                     | Contains all site related files.                                          |
 |             |                 | `css/`              | #                                                                         |
 |             |                 | `img/`              | #                                                                         |
+|             |                 | `fonts/`            | #                                                                         |
 |             |                 | `js/`               | #                                                                         |
 |             | `examples/`     |                     | Will contain all `Bootstrap5 Examples`, after they are `downloaded`.      |
 |             |                 |                     | * copy in the `examples-index.html` file to make browsing more convenient |
@@ -113,20 +135,33 @@
 
 
 ## `dist/` files
-| File                  | Description                          |
-| --------------------- | ------------------------------------ |
-| _load-style-sheet.htm | example of css-stylesheet-loader     |
-| cheatsheet.html       | XXX                                  |
-| npm-starter.html      | XXX                                  |
-| starter.html          | XXX                                  |
-| theming.html          | XXX                                  |
-| `dist/css`            |
-| cheatsheet.css        | XXX                                  |
-| `dist/img`            |
-| bs-logo-wht.svg       | XXX                                  |
-| `dist/js`             |
-| cheatsheet.js         | XXX                                  |
-| cssselector.js        | javascript for css-stylesheet-loader |
+| File                              | Description                                     |
+| ---------------------             | ------------------------------------            |
+| _examples-index.html              | XXX                                             |
+| _load-style-sheet.htm             | example of css-stylesheet-loader                |
+| starter-bootstrap-icons.html      | XXX                                             |
+| starter-cdn.html                  | XXX                                             |
+| starter-cheatsheet.html           | XXX                                             |
+| starter-my.html                   | XXX                                             |
+| starter-npm.html                  | XXX                                             |
+| starter-theming.html              | XXX                                             |
+| `dist/css`                        |
+| bootstrap-icons.css               | Bootstrap5 icons                                |
+| bootstrap.min.css                 | Bootstrap5 minified                             |
+| cheatsheet.css                    | examples/cheatsheet                             |
+| darkly-swatch.css                 | bootswatch example                              |
+| style.css                         | custom stylesheet                               |
+| `dist/fonts`                      |
+| bootstrap-icons.woff              | Bootstrap5 icons                                |
+| bootstrap-icons.woff2             | Bootstrap5 icons                                |
+| `dist/img`                        |
+| bs-logo-wht.svg                   | XXX                                             |
+| `dist/js`                         |
+| cheatsheet.js                     | examples/cheatsheet                             |
+| cssselector.js                    | javascript for css-stylesheet-loader            |
+| bootstrap.bundle.min.js           | Bootstrap5 javascript bundle minified           |
+
+
 
 ## `src/` files
 ### `assets/`

@@ -1,0 +1,19 @@
+// Google Font that has been downloaded
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+// Google Font using API
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+// Bootstrap5 icons
+$bootstrap-icons-font: "bootstrap-icons" !default;
+$bootstrap-icons-font-src: url("../fonts/bootstrap-icons.woff2") format("woff2"),
+url("../fonts/bootstrap-icons.woff") format("woff") !default;
+
+@font-face {
+  font-family: $bootstrap-icons-font;
+  src: $bootstrap-icons-font-src;
+}

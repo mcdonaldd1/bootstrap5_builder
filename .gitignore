@@ -2,6 +2,7 @@ node_modules
 dist
 examples
 reset
+sass_notes.md
 src/fonts_bs5
 src/fonts_google
 src/icons_bs5
