@@ -44,13 +44,10 @@
     "sass:bs5:min": "sass --style=compressed ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.min.css",
     "sass:bs5:reg": "sass ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.css",
     "sass:bs5:cs": "sass ./src/sass/helpers/cheatsheet.scss:./dist/css/cheatsheet.css",
-    "sass:bs5:icons": "sass ./node_modules/bootstrap-icons/font/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
-    "sass:swatch:all": "sass ./src/swatches:./dist/css",
-    "sass:swatch:darkly": "sass ./src/swatches/darkly_swatch.scss:./dist/css/darkly_swatch.css",
+    "sass:bs5:icons": "sass ./bootstrap_icons/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
+    "sass:swatch:all": "sass ./src/bootswatch:./dist/css",
+    "sass:swatch:darkly": "sass ./src/bootswatch/darkly_swatch.scss:./dist/css/darkly_swatch.css",
     "test:simple": "node ./src/js/test.js"
-  },
-  "dependencies": {
-    "bootstrap": "^5.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",

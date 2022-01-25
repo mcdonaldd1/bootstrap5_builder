@@ -1,20 +1,16 @@
-dist
-examples
 node_modules
-admin
+bootstrap
+bootstrap_examples
+bootstrap_icons
+bootswatch
+dist
 
-src/img/bootstrap-icons.svg
-src/img/bootstrap-logo-white.svg
-src/fonts_bs5
 src/fonts_google
 src/html
-src/icons_bs5
 src/icons_feather
 src/js/helpers
 src/js/vendors
 src/reset
-src/sass/vendors
-src/sass/helpers
-src/sass/sass_notes.md
+src/scss
 src/swatches
 src/svg
