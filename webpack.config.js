@@ -27,7 +27,7 @@ module.exports = [{
     mode: 'production',
     output: {
       path: path.resolve(__dirname, './dist/js'),
-      filename: 'bundle.blab.js',
+      filename: 'es5.bundle.min.js',
       publicPath: './dist/js'
     },
     module: {

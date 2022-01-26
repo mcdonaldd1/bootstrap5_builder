@@ -26,28 +26,39 @@
     "js:bundle": "webpack --config-name bundle",
     "js:pack": "webpack --config-name pack",
     "js:blable": "webpack --config-name blable",
-    "copy:bs5:jsbundles": "copyfiles -s -u 4 ./node_modules/bootstrap/dist/js/bootstrap.bundle.* ./dist/js",
-    "copy:bs5:helpers": "copyfiles -s -u 3 ./src/js/helpers/c* ./dist/js",
-    "copy:html:helpers": "copyfiles -s -u 3 ./src/html/helpers/*.html ./dist",
+    "js:copy:bundles": "copyfiles -s -u 4 ./src/bs5_core/dist/js/bootstrap.bundle.* ./dist/js",
+    "js:copy:helpers": "copyfiles -s -u 3 ./src/js/helpers/c* ./dist/js",
+
+    "copy:html:all": "npm-run-all copy:html:bs5 copy:html:my copy:html:html",
+    "copy:html:bs5": "copyfiles -s -u 3 ./src/html/bs5/*.html ./dist",
+    "copy:html:my": "copyfiles -s -u 2 ./src/html/*.html ./dist",
+    "copy:html:html": "copyfiles -s -u 3 ./src/html/html/*.html ./dist/html",
+
+    "project:build": "npm-run-all sass:dev:all js:blable",
+    "project:server": "webpack-dev-server",
+
+    "project:reset": "//TODO: npm-run-all sass:dev:all js:blable",
+    "css:prefix": "//TODO: postcss --replace dist/css/style.css --use autoprefixer --map",
+    "css:lint": " //TODO: stylelint ./src/sass/",
+    "css:purge": "//TODO: echo to do",
+
     "copy:fonts:all": "npm-run-all copy:fonts:bs5 copy:fonts:google",
-    "copy:bs5:fonts": "copyfiles -s -u 2 ./src/fonts_bs5/* ./dist/fonts",
+    "copy:fonts:bs5": "copyfiles -s -u 3 ./src/bs5_icons/fonts/* ./dist/fonts",
     "copy:fonts:google": "copyfiles -s -u 2 ./src/fonts_google/*.ttf ./dist/fonts",
-    "copy:bs5:icons": "copyfiles -s -u 2 ./src/img/bootstrap-logo-white.svg ./dist/img",
-    "project:build": "npm-run-all compile:sass blable:js",
-    "server:basic": "webpack-dev-server",
-    "css:prefix": "postcss --replace dist/css/style.css --use autoprefixer --map",
-    "css:lint": "stylelint ./src/sass/",
+    "copy:logos:bs5": "copyfiles -s -u 3 ./src/bs5_core/brand/* ./dist/img",
+
     "sass:dev:all": "sass ./src/sass:./dist/css",
     "sass:dev:watch": "sass --watch ./src/sass:./dist/css",
     "sass:dev:style": "sass ./src/sass/style.scss:./dist/css/style.css",
     "sass:bs5:all": "npm-run-all sass:bs5:min sass:bs5:cs sass:bs5:icons",
     "sass:bs5:min": "sass --style=compressed ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.min.css",
-    "sass:bs5:reg": "sass ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.css",
-    "sass:bs5:cs": "sass ./src/sass/helpers/cheatsheet.scss:./dist/css/cheatsheet.css",
-    "sass:bs5:icons": "sass ./bootstrap_icons/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
-    "sass:swatch:all": "sass ./src/bootswatch:./dist/css",
-    "sass:swatch:darkly": "sass ./src/bootswatch/darkly_swatch.scss:./dist/css/darkly_swatch.css",
-    "test:simple": "node ./src/js/test.js"
+    "sass:bs5:reg": "sass ./src/bs5_core/scss/bootstrap.scss:./dist/css/bootstrap.css",
+    "sass:bs5:cs": "sass ./src/bs5_examples/cheatsheet/cheatsheet.css:./dist/css/cheatsheet.css",
+    "sass:bs5:icons": "sass ./src/bs5_icons/bootstrap-icons.scss:./dist/css/bootstrap-icons.css",
+    "sass:swatch:all": "sass ./src/bs5_swatch:./dist/css",
+    "sass:swatch:darkly": "sass ./src/bs5_swatch/darkly_swatch.scss:./dist/css/darkly_swatch.css",
+
+    "test:1": "node ./src/js/test.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",
@@ -66,5 +77,9 @@
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.2"
   }
 }

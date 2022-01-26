@@ -1,2 +1,3 @@
-let msg = "TEST SUCCESS; test:simple; test.js; via node..."
-console.log(msg);
+console.log("test status: SUCCESS");
+console.log("npm script: test:1");
+console.log("script file: test.js");

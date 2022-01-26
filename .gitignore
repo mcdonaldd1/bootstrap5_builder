@@ -1,16 +1,10 @@
 node_modules
-bootstrap
-bootstrap_examples
-bootstrap_icons
-bootswatch
 dist
 
+src/bs5_*
 src/fonts_google
 src/html
 src/icons_feather
 src/js/helpers
 src/js/vendors
-src/reset
 src/scss
-src/swatches
-src/svg
