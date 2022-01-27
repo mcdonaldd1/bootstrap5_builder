@@ -86,6 +86,12 @@
 ### Add `animation.css` library
 ### Add `d3.js` library
 
+## Servers
+### Webpack-dev-server (9000)
+### Node.js server (8523)
+### LAMP server (80)
+### Express server (tbd)
+
 <br /><hr color="black" width="75%"/><br />
 
 

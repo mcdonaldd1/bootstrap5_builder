@@ -33,9 +33,10 @@
     "copy:html:my": "copyfiles -s -u 2 ./src/html/*.html ./dist",
     "copy:html:html": "copyfiles -s -u 3 ./src/html/html/*.html ./dist/html",
     "project:build": "npm-run-all sass:dev:all js:blable",
-    "project:server": "webpack-dev-server",
-    "server:basic": "node ./basic_server.js",
-    "server:lamp": "bash ./lamp_server.sh",
+    "server:webpack": "webpack-dev-server",
+    "server:node": "node ./server_node.js",
+    "server:lamp": "bash ./server_lamp.sh",
+    "server:express": "node ./server_express.js",
     "project:reset": "//TODO: npm-run-all sass:dev:all js:blable",
     "css:prefix": "//TODO: postcss --replace dist/css/style.css --use autoprefixer --map",
     "css:lint": " //TODO: stylelint ./src/sass/",
@@ -78,6 +79,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
-    "bootstrap-icons": "^1.7.2"
+    "bootstrap-icons": "^1.7.2",
+    "express": "^4.17.2"
   }
 }
