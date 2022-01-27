@@ -5,7 +5,6 @@
 ### *** This project is considered incomplete until this warning is removed ***
 <br /><hr style="color: grey; width: 50%; text-size: 1rem"/><br />
 
-
 # Setup Bootstrap5 Builder
 
 ## 1) Clone the repository
