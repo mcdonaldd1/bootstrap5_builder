@@ -1,3 +1,5 @@
 **/*.min.css
 **/dist/
+**/src/bs5*
+**/vendors/*.*
 node_modules

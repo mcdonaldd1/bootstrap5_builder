@@ -1,42 +1,83 @@
 # Sass Basics
+sass_file.sass
 
-## Features
-* Syntax: css or sass
-* $variables
-* &:Parent selector
+scss_file.scss
 
-* _partial.scss
-* @import 'partial'
-* *@use 'partial'
+css_file.css
 
-* @Functions
-* @Return
+## Transpiling
+watch - v - run
 
-* @Mixin mix-name
-* @Include mix-name
+# Sass Features
+* `Sass Syntax`
+* `Scss/css Syntax`
 
-* @Extend existing-selector
+* `$variables`
 
-## 7-1
-### abstract
+* `&:Parent selector`
+* `Nesting`
+
+* `_partial.scss`
+* `@import 'partial'`
+* `@use 'partial'`
+
+* `@functions`
+* `@return`
+
+* `@mixin mix-name`
+* `@include mix-name`
+
+* `@extend existing-selector`
+
+* `operators`
+
+## * Comments
+* Loud    : /* to css */
+* Silent  : // sass only
+* Document: /// used for documentation
+
+# Sass Advanced
+* @if
+* @each
+* @for
+* @while
+* @use"sass:math"
+
+# Sass and scss
+* sass and scss are the same thing using a different syntax.
+* css came first, and had limitations
+* sass came next, solved many problems, but introduced an unpopular (unfairly so) syntax
+* scss allows css syntax in sass. You can rename a .css file to .scss and it will work with sass.
+* Use scss
+
+# Sass and css
+* The features of Sass are used to overcome the limitations of css, and to enrich its language.
+* Sass should be used, even on small projects. It's simple and efficient. Learn it.
+
+# Sass 7-1 Architecture
+* `7-1` is an architecture that splits scss into module files.
+* The module files are imported together, using a main file.
+* Splitting code into modules eases development efforts, even though it looks like extra work.
+
+## abstract
 * functions
 * mixins
 * variables
 
-### animation
+## animation
 * animate
 * animations
 * hint
 - hover
 
-### base
+## base
 * normalize
 * reset
 * typography
 - color_theme
 - base_styles
 
-### elements
+## elements
 * anchor
 * buttons
 * elements
@@ -46,20 +87,20 @@
 - lists
 - borders
 
-### layouts
+## layouts
 * bs-grid
 * my-grid
 * skeleton
 - queries
 
-### sections
+## sections
 - header
 - navbar
 - main
 - sidebar
 - footer
 
-### vendors
+## vendors
 * bootstrap
 * bulma
 * fontawesome-all
@@ -68,18 +109,18 @@
 * skeleton
 * w3
 
-### pages
+## pages
 home
 about
 contact
 
-### components
+## components
 landing
 jumbotron
 carosel
 slider
 
-### utility
+## utility
 print
 pagged
 reader

@@ -1,5 +1,4 @@
 {
-  "extends": [
-    "stylelint-config-twbs-bootstrap/scss"
-  ]
+  "extends": ["stylelint-config-standard"],
+  "customSyntax": "postcss-scss"
 }
