@@ -5,7 +5,9 @@
 ### *** This project is considered incomplete until this warning is removed ***
 <br /><hr style="color: grey; width: 50%; text-size: 1rem"/><br />
 
-# Setup Bootstrap5 Builder
+# Summary
+
+# Setup
 
 ## 1) Clone the repository
 ```shell
@@ -43,7 +45,8 @@
 
 <br /><hr color="black" width="75%"/><br />
 
-# Basic Usage and Ideas to try
+
+# Basic Usage
 
 ## Fonts and Icons
 ### `Google fonts`
@@ -95,52 +98,66 @@
 <br /><hr color="black" width="75%"/><br />
 
 
-# Folders and files
+# Ideas to Try
+
+# Folders and Files
 
 ## Root Folders
-| Root        | Folder          | subfolders          | Description                                                               |
-| ----------- | --------------- | ------------------- |-------------------------------------------------------------------------- |
-| `builder/`  |                 |                     | The root folder that holds project and build related files.               |
-|             | `dist/`         |                     | Contains all site related files.                                          |
-|             |                 | `css/`              | #                                                                         |
-|             |                 | `img/`              | #                                                                         |
-|             |                 | `fonts/`            | #                                                                         |
-|             |                 | `js/`               | #                                                                         |
-|             | `examples/`     |                     | Will contain all `Bootstrap5 Examples`, after they are `downloaded`.      |
-|             |                 |                     | * copy in the `examples-index.html` file to make browsing more convenient |
-|             | `node_modules/` |                     | Contains all installed dependencies of the project.                       |
-|             |                 | `bootstrap/`        | #                                                                         |
-|             |                 | `bootstrap-icons/`  | #                                                                         |
-|             | `src/`          |                     | Contain all custom source files.                                          |
-|             |                 | `assets/`           | #                                                                         |
-|             |                 | `fonts/`            | Will contain all `Google fonts`, after they are `downloaded`.             |
-|             |                 | `js/`               | #                                                                         |
-|             |                 | `reset/`            | Contains backups of all starter files. Start over witout reinstalling     |
-|             |                 | `sass/`             | #                                                                         |
-|             |                 | `swatches/`         | Will contain all `Bootswatch` files , after they are `downloaded`.        |
+
+| Folder          | subfolders          | Description                                                               |
+| --------------- | ------------------- |-------------------------------------------------------------------------- |
+| `builder/`      | `all other folders` | The root folder that holds project and build related files.               |
+|                 |                     |                                                                           |
+| `dist/`         |                     | Contains all site related files.                                          |
+|                 | `css/`              | #                                                                         |
+|                 | `img/`              | #                                                                         |
+|                 | `fonts/`            | #                                                                         |
+|                 | `js/`               | #                                                                         |
+| `node_modules/` |                     | Contains all installed dependencies of the project.                       |
+|                 | `bootstrap/`        | #                                                                         |
+|                 | `bootstrap-icons/`  | #                                                                         |
+| `src/`          |                     | Contain all custom source files.                                          |
+|                 | `bs5_core/`         | #                                                                         |
+|                 | `bs5_examples/`     | #                                                                         |
+|                 | `bs5_icons/`        | #                                                                         |
+|                 | `bs5_swatch/`       | #                                                                         |
+|                 | `crud/`             | #                                                                         |
+|                 | `fonts_google/`     | Will contain all `Google fonts`, after they are `downloaded`.             |
+|                 | `html/`             | #                                                                         |
+|                 | `icons_feather/`    | #                                                                         |
+|                 | `img/`              | Contains backups of all starter files. Start over witout reinstalling     |
+|                 | `js/`               | #                                                                         |
+|                 | `sass/`             | #                                                                         |
+|                 | `scss/`             | Will contain all `Bootswatch` files , after they are `downloaded`.        |
 
 
 ## `builder/` files
-| File               | Description                                                                                 |
-| -----------------  | ------------------------------------------------------------------------------------------- |
-| .browserslistrc    | `Postcss` uses this to target browsers it will or won't support.                            |
-|                    | `autoprefixer` will only prefix the code needed to support these browsers.                  |
-| .editorconfig      | Used to overide existing settings on 'editorconfig' aware editors and ide's.                |
-|                    | in VSCode install the extension: `EditorConfig for VSCode`                                  |
-| .gitignore         | list of folders and files to be ignored (not watched) by `git`.                             |
-| .stylelintignore   | list of folders and files to be ignored (not watched) by `stylelint`                        |
-| .stylelintrc       | `stylelint` uses this to load specific linters.                                             |
-| babel.config.json  | `babel` uses this  to load specific presets                                                 |
-| LICENSE.md         | standard icense                                                                             |
-| package-lock.json  | system file you should ignore                                                               |
-| package.json       | main configuration file for npm, and your project                                           |
-| README.md          | this file, the one you are reading                                                          |
-| webpack.config.js  | configuration file for `webpack`                                                            |
+| File                | Description                                                                                 |
+| -----------------   | ------------------------------------------------------------------------------------------- |
+| .browserslistrc     | `Postcss` uses this to target browsers it will or won't support.                            |
+|                     | `autoprefixer` will only prefix the code needed to support these browsers.                  |
+| .editorconfig       | Used to overide existing settings on 'editorconfig' aware editors and ide's.                |
+|                     | in VSCode install the extension: `EditorConfig for VSCode`                                  |
+| .gitignore          | list of folders and files to be ignored (not watched) by `git`.                             |
+| .stylelintignore    | list of folders and files to be ignored (not watched) by `stylelint`                        |
+| .stylelintrc        | `stylelint` uses this to load specific linters.                                             |
+| babel.config.json   | `babel` uses this  to load specific presets                                                 |
+| LICENSE.md          | standard icense                                                                             |
+| package-lock.json   | system file you should ignore                                                               |
+| package.json        | main configuration file for npm, and your project                                           |
+| postcss.config.js   |                                                                                             |
+| purgecss.config.js  |                                                                                             |
+| README.md           | this file, the one you are reading                                                          |
+| server_express.js   |                                                                                             |
+| server_lamp.sh      |                                                                                             |
+| server_node.js      |                                                                                             |
+| webpack.config.js   | configuration file for `webpack`                                                            |
 
 
-## `dist/` files
+## `dist/` folders and files
 | File                              | Description                                     |
 | ---------------------             | ------------------------------------            |
+| `dist/`                           |                                                 |
 | _examples-index.html              | XXX                                             |
 | _load-style-sheet.htm             | example of css-stylesheet-loader                |
 | starter-bootstrap-icons.html      | XXX                                             |
@@ -166,8 +183,7 @@
 | bootstrap.bundle.min.js           | Bootstrap5 javascript bundle minified           |
 
 
-
-## `src/` files
+## `src/` folder and files
 ### `assets/`
 ### `fonts/`
 ### `js/`
@@ -176,7 +192,6 @@
 ### `swatches/`
 ### `assets/`
 *
-
 
 
 # NPM Scripts
@@ -212,20 +227,22 @@
 # Technology List
 
 ## [VS Code](https://code.visualstudio.com/)
-* Bootstrap5 Snippets
-* open in default browser
-* EditorConfig for VSCode
-* npm
-* npm intellisense
-* css peak
-* color highlighter
-* Beautify
 * Auto-close tags
 * Auto-rename tags
-* Emmet (built-in)
+* Beautify
+* Bootstrap5 Snippets
+* color highlighter
+* css peak
+* EditorConfig for VSCode
 * Javascript Snippet Pack
 * Javascript(ES6) Code snippets
+* Material Theme Icons
+* npm
+* npm intellisense
+* open in default browser
 * svg
+* TODO Highlighter
+* Emmet (built-in)
 
 ## Git
 * [Git](https://git-scm.com/)
@@ -261,6 +278,7 @@
 * [Google fonts](https://fonts.google.com)
 * [FontAwesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)
 * [W3Schools Bootstrap tutorial](https://www.w3schools.com/bootstrap5/index.php)
+* [Can I Use](https://caniuse.com)
 
 <br /><hr color="black" width="75%"/><br />
 
