@@ -84,6 +84,6 @@ server.listen(port, function (error) {
   if (error) {
     console.log("SERVER ERROR: " + error);
   } else {
-    console.log(`Server started at ${prot}${host}:${port} ... Ctl-C to exit...`);
+    console.log(`Node.js server started at ${prot}${host}:${port} ... Ctl-C to exit...`);
   }
 });
