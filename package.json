@@ -50,7 +50,7 @@
     "sass:dev:all": "sass ./src/sass:./dist/css",
     "sass:dev:watch": "sass --watch ./src/sass:./dist/css",
     "sass:dev:style": "sass ./src/sass/style.scss:./dist/css/style.css",
-    "sass:dev:animate": "sass ./src/scss/_my_animate.scss:./dist/css/my_animate.css",
+    "sass:dev:animate": "sass ./src/scss/vendors/_animate.scss:./dist/css/animate.css",
     "sass:bs5:all": "npm-run-all sass:bs5:min sass:bs5:cs sass:bs5:icons",
     "sass:bs5:min": "sass --style=compressed ./node_modules/bootstrap/scss/bootstrap.scss:./dist/css/bootstrap.min.css",
     "sass:bs5:reg": "sass ./src/bs5_core/scss/bootstrap.scss:./dist/css/bootstrap.css",
