@@ -5,6 +5,8 @@ src/bs5_*
 src/fonts_google
 src/html
 src/icons_feather
+src/icons_tabler/*
+src/icons_tabler/icons
 src/js/helpers
 src/js/vendors
 src/scss
