@@ -5,5 +5,5 @@ module.exports = {
   css: ['./dist/css/style.css'],
   keyframes: true,
   variables: true,
-  output: ['./dist/css/style.min.min.css']
+  output: ['./dist/css/style.min.css']
 }

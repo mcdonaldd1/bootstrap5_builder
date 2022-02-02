@@ -7,6 +7,6 @@ src/html
 src/icons_feather
 src/icons_bs5
 src/icons_tabler
-src/js/helpers
+src/js/utilities
 src/js/vendors
 src/scss
