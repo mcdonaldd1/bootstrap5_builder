@@ -9,4 +9,6 @@ src/icons_bs5
 src/icons_tabler
 src/js/utilities
 src/js/vendors
+src/js/modules
 src/scss
+src/css

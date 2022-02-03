@@ -269,7 +269,7 @@
 * stylelint
 
 ## Webpack
-* webpack
+* [webpack](https://webpack.js.org/)
 * webpack-dev-server
 * webpack-cli
 

@@ -1,15 +1,11 @@
-import { vfunc } from "./mymodule.js";
+// import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import _ from 'lodash';
+import compClickMe from './modules/component'
 
-// Import Jquery before Bootstrap if you are going to use it
-// import { $ } from "./vendors/jquery ";
+const css = require('../css/style.css').toString();
+// const css = require('../css/bootstrap.css').toString();
 
-import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+document.body.appendChild(compClickMe());
 
-// The first line of this file, shows the import of a custom module, mymodule.js
-console.log(vfunc()); // this line tests that the imported function works
-
-// The second line of this file, shows the import of the full bootstrap.bundle.min.js file
-// multiple import statements can be used instead, to only import the needed parts of bootstrap
-// ..for example
-// import "../../node_modules/bootstrap/js/dist/util.js";
-// import "../../node_modules/bootstrap/js/dist/modal.js";
+let callLog = () => console.log('hair row function');
+callLog();

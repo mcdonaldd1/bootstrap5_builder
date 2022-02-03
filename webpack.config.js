@@ -1,63 +1,65 @@
-var path = require('path');
+const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = [{
     name: 'bundle',
-    entry: './src/js/main.js',
-    mode: 'development',
-    output: {
-      path: path.resolve(__dirname, 'dist/js'),
-      filename: 'bundle.js',
-      publicPath: 'dist/js'
-    }
-  },
-  {
-    name: 'pack',
-    entry: './src/js/main.js',
-    mode: 'production',
-    output: {
-      path: path.resolve(__dirname, './dist/js'),
-      filename: 'bundle.min.js',
-      publicPath: './dist/js'
-    }
-  },
-  {
-    name: 'blable',
-    entry: './src/js/main.js',
-    mode: 'production',
-    output: {
-      path: path.resolve(__dirname, './dist/js'),
-      filename: 'es5.bundle.min.js',
-      publicPath: './dist/js'
+
+    entry: {
+      script: './src/js/main.js',
+      // bootstrap: './src/js/vendors/bootstrap.js',
     },
-    module: {
-      rules: [{
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: [{
-            loader: 'babel-loader'
-          }]
-        },
-        {
-          test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
-          loader: "file"
-        },
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: 'asset/resource',
-        },
-        {
-          test: /\.css$/,
-          use: ["style-loader", "css-loader", "postcss-loader"]
-        }
-      ]
+
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'js/[name].bundle.js',
+      clean: true,
+      publicPath: '.',
     },
-    devServer: {
-      static: {
-        directory: path.join(__dirname, 'dist'),
+
+    devtool: 'inline-source-map',
+
+    plugins: [
+      new HtmlWebpackPlugin(
+        {
+          title: 'NPM Builder Starter Page',
+          filename: 'index.html',
+          template: './src/html/index.html',
+        })
+      ],
+
+      devServer: {
+        open: true,
+        static: {
+          directory: path.join(__dirname, "dist"),
+        },
+        port: 9000,
       },
-      compress: true,
-      port: 9000,
-    },
+
+      module: {
+        rules: [{
+            test: /\.123js$/,
+            exclude: /(node_modules)/,
+            use: [{
+              loader: 'babel-loader'
+            }]
+          },
+          {
+            test: /\.css$/,
+            exclude: /(node_modules)/,
+            use: ["style-loader", "css-loader"]
+          },
+          {
+            test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+            exclude: /(node_modules)/,
+            loader: "file"
+          },
+          {
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            exclude: /(node_modules)/,
+            type: 'asset/resource',
+          },
+        ]
+      },
   },
 ]
