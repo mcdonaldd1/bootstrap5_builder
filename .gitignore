@@ -10,5 +10,6 @@ src/icons_tabler
 src/js/utilities
 src/js/vendors
 src/js/modules
+src/sass
 src/scss
 src/css

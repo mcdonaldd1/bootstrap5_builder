@@ -1,9 +1,7 @@
-// const purgecss = require('@fullhuman/postcss-purgecss')
-
 module.exports = {
-  content: ['./dist/index.html'],
-  css: ['./dist/css/style.css'],
+  content: ['./src/html/index.html', './src/js/main.js'],
+  css: ['./src/css/style_custom.css'],
   keyframes: true,
   variables: true,
-  output: ['./dist/css/style.min.css']
+  output: './src/css/style.css'
 }

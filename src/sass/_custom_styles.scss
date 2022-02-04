@@ -1,13 +1,12 @@
-// IMPORT CUSTOM MODULES
-@import "./modules/google_fonts";
-
 // WRITE CUSTOM STYLES
 body {
-  font-family: Montserrat sans-serif;
+  font-family: Montserrat, sans-serif;
   padding: 3rem 1.5rem;
 }
 
 // Style Bootstrap icons
 .bi {
-  fill: currentColor;
-}
+  fill: darkgray;
+  margin: .25rem;
+  font-size: 2.5rem;
+  }
